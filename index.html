@@ -1,1 +1,817 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #000000;
+    --gold: #C9A876;
+    --gold-light: #D4B98A;
+    --white: #FFFFFF;
+    --gray: #888888;
+    --gray-dark: #111111;
+    --gray-mid: #1a1a1a;
+  }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 48px;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,118,0.15);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    background: radial-gradient(ellipse at 50% 60%, rgba(201,168,118,0.08) 0%, transparent 70%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A876' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    max-width: 900px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); }
+
+  .btn-secondary {
+    border: 1px solid rgba(201,168,118,0.4);
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--white); }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--gray-dark);
+    border-top: 1px solid rgba(201,168,118,0.15);
+    border-bottom: 1px solid rgba(201,168,118,0.15);
+    padding: 48px 24px;
+  }
+
+  .stats-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 100px 24px;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .section-sub {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-bottom: 60px;
+  }
+
+  /* PROBLEM */
+  .problem { background: var(--gray-mid); }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  .problem-card {
+    background: var(--black);
+    padding: 48px 40px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .problem-card:hover { border-color: var(--gold); }
+
+  .problem-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(201,168,118,0.2);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .problem-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+
+  .problem-card p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+  }
+
+  /* ARIA */
+  .aria-section { background: var(--black); }
+
+  .aria-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .aria-features {
+    list-style: none;
+    margin: 32px 0;
+  }
+
+  .aria-features li {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .aria-features li::before {
+    content: '→';
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* CHAT DEMO */
+  .chat-demo {
+    background: var(--gray-dark);
+    border: 1px solid rgba(201,168,118,0.15);
+    padding: 32px;
+  }
+
+  .chat-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(201,168,118,0.15);
+  }
+
+  .chat-bubble {
+    margin-bottom: 20px;
+  }
+
+  .bubble-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .bubble-label.caller { color: rgba(255,255,255,0.4); }
+
+  .bubble-text {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+    background: rgba(255,255,255,0.04);
+    padding: 14px 18px;
+    border-left: 2px solid var(--gold);
+  }
+
+  .bubble-text.caller-bubble {
+    border-left-color: rgba(255,255,255,0.2);
+  }
+
+  .chat-cta {
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  /* PRICING */
+  .pricing { background: var(--gray-mid); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .pricing-card {
+    background: var(--black);
+    padding: 48px 36px;
+    position: relative;
+  }
+
+  .pricing-card.featured {
+    background: var(--gray-dark);
+    border-top: 3px solid var(--gold);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -1px; right: 32px;
+    background: var(--gold);
+    color: var(--black);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+  }
+
+  .tier-name {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .tier-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .tier-setup {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .tier-features {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+
+  .tier-features li {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.65);
+    padding: 8px 0;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .tier-features li::before {
+    content: '✓';
+    color: var(--gold);
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+
+  .tier-features li.unavailable {
+    color: rgba(255,255,255,0.2);
+  }
+
+  .tier-features li.unavailable::before {
+    content: '—';
+    color: rgba(255,255,255,0.15);
+  }
+
+  /* HOW IT WORKS */
+  .how-it-works { background: var(--black); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .step-card {
+    background: var(--gray-dark);
+    padding: 40px 32px;
+  }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(201,168,118,0.15);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .step-card h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+
+  .step-card p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--gray-mid);
+    text-align: center;
+    padding: 120px 24px;
+  }
+
+  .cta-section .section-title {
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+
+  .cta-section .section-sub {
+    margin: 0 auto 48px;
+  }
+
+  .cta-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .cta-fine {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.3);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(201,168,118,0.1);
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .problem-grid { grid-template-columns: 1fr; }
+    .aria-inner { grid-template-columns: 1fr; gap: 48px; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 600px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps-grid { grid-template-columns: 1fr; }
+    .hero-btns { flex-direction: column; align-items: center; }
+  }
+</style>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Prime Intelligence CRM</div>
+  <a href="tel:5718372665" class="nav-cta">📞 Call Aria Now</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">CRM Built for Real Estate Agents</p>
+  <h1>Stop Losing Leads.<br><span>Start Running a System.</span></h1>
+  <p class="hero-sub">Prime Intelligence CRM automates your follow-up, books appointments while you sleep, and puts your reputation on autopilot — so you can focus on closing.</p>
+  <div class="hero-btns">
+    <a href="tel:5718372665" class="btn-primary">📞 Call &amp; Try Aria Now</a>
+    <a href="https://goprimeintelligence.com/demo" class="btn-secondary">Book a Demo Call</a>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num">78%</div>
+      <div class="stat-label">Of leads go to the first agent who responds</div>
+    </div>
+    <div>
+      <div class="stat-num">5 min</div>
+      <div class="stat-label">Response window before a lead goes cold</div>
+    </div>
+    <div>
+      <div class="stat-num">13+</div>
+      <div class="stat-label">Automated workflows running for you 24/7</div>
+    </div>
+    <div>
+      <div class="stat-num">$0</div>
+      <div class="stat-label">In leads lost to voicemail with Aria active</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="section-inner">
+    <p class="section-eyebrow">The Problem</p>
+    <h2 class="section-title">Your leads are slipping through<br>cracks you don't even see.</h2>
+    <p class="section-sub">You're working hard. But without a system, every missed call, every slow follow-up, every forgotten lead is a commission someone else collected.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-num">01</div>
+        <h3>Missed Calls = Missed Deals</h3>
+        <p>You can't answer every call. Without automation, that lead calls your competitor next.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">02</div>
+        <h3>Manual Follow-Up Fails</h3>
+        <p>Sticky notes and spreadsheets don't close deals. Leads go cold while you're busy showing homes.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">03</div>
+        <h3>No Reviews, No Referrals</h3>
+        <p>Happy clients forget to leave reviews. Without a system asking for them, your reputation stalls.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">04</div>
+        <h3>Dead Database</h3>
+        <p>You have hundreds of contacts sitting dormant. Without automation they stay there — forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARIA -->
+<section class="aria-section">
+  <div class="aria-inner">
+    <div>
+      <p class="section-eyebrow">Live AI — Leverage &amp; Elite</p>
+      <h2 class="section-title">Meet Aria.<br>Your AI Agent.</h2>
+      <p class="section-sub" style="margin-bottom:0;">Aria answers every inbound call, captures lead info, qualifies their intent, and books them into your calendar — automatically. No voicemail. No missed opportunities.</p>
+      <ul class="aria-features">
+        <li>Answers calls 24/7 — even when you're showing a home</li>
+        <li>Captures name, email, and phone number on every call</li>
+        <li>Qualifies: buying, selling, investing, or relocating</li>
+        <li>Identifies what area they're looking in — 5 states, county-level</li>
+        <li>Books directly into your consultation calendar</li>
+        <li>Tags every lead and fires the nurture sequence automatically</li>
+        <li>If Aria misses it — Missed Call Text Back fires as backup. Zero lead leakage.</li>
+      </ul>
+      <a href="tel:5718372665" class="btn-primary">Call &amp; Experience Aria →</a>
+    </div>
+    <div>
+      <div class="chat-demo">
+        <div class="chat-label">Live Call Simulation</div>
+        <div class="chat-bubble">
+          <div class="bubble-label">Aria</div>
+          <div class="bubble-text">Hey, you've reached [Brokerage Name]. I'm Aria, your AI assistant. How can I help you today?</div>
+        </div>
+        <div class="chat-bubble">
+          <div class="bubble-label caller">Caller</div>
+          <div class="bubble-text caller-bubble">Hi, I'm looking to buy a home in the area.</div>
+        </div>
+        <div class="chat-bubble">
+          <div class="bubble-label">Aria</div>
+          <div class="bubble-text">Perfect! I'd love to get you connected. Can I grab your name and best email so we can follow up?</div>
+        </div>
+        <div class="chat-bubble">
+          <div class="bubble-label caller">Caller</div>
+          <div class="bubble-text caller-bubble">Sure — it's Marcus, marcus@email.com</div>
+        </div>
+        <div class="chat-bubble">
+          <div class="bubble-label">Aria</div>
+          <div class="bubble-text">Got it Marcus. Let me check available times and get you booked for a Buyer Consultation...</div>
+        </div>
+        <div class="chat-cta">
+          <a href="tel:5718372665" class="btn-primary" style="font-size:0.65rem; padding:12px 28px;">Call the Demo Line</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="section-inner">
+    <p class="section-eyebrow">Choose Your Tier</p>
+    <h2 class="section-title">Your system. Your pace.</h2>
+    <p class="section-sub">Every tier includes a done-for-you build and custom deployment. Start lean at Launch and scale up as your business grows. No tech skills required.</p>
+    <div class="pricing-grid">
+      <!-- LAUNCH -->
+      <div class="pricing-card">
+        <div class="tier-name">Launch</div>
+        <div class="tier-price">$297<span style="font-size:1.2rem;font-weight:300;color:rgba(255,255,255,0.5)">/mo</span></div>
+        <div class="tier-setup">$99 setup fee · Month 1 total: $396</div>
+        <ul class="tier-features">
+          <li>CRM + Pipeline Management</li>
+          <li>Missed Call Text Back</li>
+          <li>Appointment Booking (Buyer + Listing)</li>
+          <li>Review Automation</li>
+          <li>5-Minute Lead Response Alert</li>
+          <li>Stale Lead Revival</li>
+          <li>Inbound Reply Protection</li>
+          <li>Intake Forms (Buyer + Listing)</li>
+          <li>Social Media Feature Access</li>
+          <li>A2P Basic Template Included</li>
+          <li>Video Library (12 videos)</li>
+          <li>Self-Guided Onboarding + Loom</li>
+          <li>Ticket Support</li>
+          <li class="unavailable">Aria Voice AI Agent</li>
+          <li class="unavailable">Lead Nurture Sequence</li>
+          <li class="unavailable">VA Help Desk</li>
+        </ul>
+        <a href="https://goprimeintelligence.com/demo" class="btn-secondary" style="width:100%;text-align:center;display:block;">Get Started</a>
+      </div>
+      <!-- LEVERAGE -->
+      <div class="pricing-card featured">
+        <div class="popular-badge">Most Popular</div>
+        <div class="tier-name">Leverage</div>
+        <div class="tier-price">$497<span style="font-size:1.2rem;font-weight:300;color:rgba(255,255,255,0.5)">/mo</span></div>
+        <div class="tier-setup">$497 setup fee · Month 1 total: $994</div>
+        <ul class="tier-features">
+          <li>Everything in Launch</li>
+          <li>Aria Voice AI Agent (24/7)</li>
+          <li>Double Coverage — Aria + Missed Call Backup</li>
+          <li>30-Day Lead Nurture Sequence</li>
+          <li>New Listing Announcement</li>
+          <li>Open House Follow-Up</li>
+          <li>Price Drop Notification</li>
+          <li>Birthday &amp; Anniversary Touch</li>
+          <li>Referral Request Workflow</li>
+          <li>Comment-to-DM Automation</li>
+          <li>Lead Capture Funnel</li>
+          <li>Reporting Dashboard</li>
+          <li>VA Onboarding + Help Desk</li>
+          <li>3 Edit Requests/Month Included</li>
+        </ul>
+        <a href="https://goprimeintelligence.com/demo" class="btn-primary" style="width:100%;text-align:center;display:block;">Get Started</a>
+      </div>
+      <!-- ELITE -->
+      <div class="pricing-card">
+        <div class="tier-name">Elite</div>
+        <div class="tier-price">$997<span style="font-size:1.2rem;font-weight:300;color:rgba(255,255,255,0.5)">/mo</span></div>
+        <div class="tier-setup">Setup fee waived for founding clients · Limited time</div>
+        <ul class="tier-features">
+          <li>Everything in Leverage</li>
+          <li>VA-Managed Social Media</li>
+          <li>VA-Built Lead Capture Funnels</li>
+          <li>2-Hour Monthly Strategy Call with Juwan</li>
+          <li>Priority VA Support</li>
+          <li>A2P Full Guidance Included</li>
+          <li>White Glove Onboarding</li>
+          <li>Content shoots available through JDP separately</li>
+        </ul>
+        <a href="https://goprimeintelligence.com/demo" class="btn-primary" style="width:100%;text-align:center;display:block;background:#111;border:1px solid rgba(201,168,118,0.4);color:#C9A876;">Claim Founding Spot</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="section-inner">
+    <p class="section-eyebrow">How It Works</p>
+    <h2 class="section-title">Done for you. Live in days.</h2>
+    <p class="section-sub">You don't touch a single workflow. We build it, test it, and hand you the keys.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>You Pay &amp; Submit Your Info</h3>
+        <p>Complete the onboarding form with your business details. Takes 5 minutes.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>We Build Your System</h3>
+        <p>Your dedicated specialist deploys and customizes your entire CRM — every workflow, every message, every link.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>We Test Everything</h3>
+        <p>Nine live tests before you go live. If it doesn't pass, it doesn't launch.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <h3>You Go Live</h3>
+        <p>1-hour onboarding call, video library access, and a dedicated help desk. Your system runs 24/7 from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <p class="section-eyebrow">What's Your Trigger?</p>
+  <h2 class="section-title">Your leads deserve a system that never sleeps.</h2>
+  <p class="section-sub">Book a demo call and see exactly how Prime Intelligence CRM runs in a live real estate account — or call Aria right now and experience it yourself.</p>
+  <div class="cta-btns">
+    <a href="tel:5718372665" class="btn-primary">📞 Call &amp; Try Aria Now</a>
+    <a href="https://goprimeintelligence.com/demo" class="btn-secondary">Book a Demo Call</a>
+  </div>
+  <p class="cta-fine">3-month minimum. $150 workflow repair fee applies if client modifies workflow structure. Content production books separately through JDP.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Prime Intelligence CRM</div>
+  <ul class="footer-links">
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms of Service</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 PrimeView Media. All rights reserved.</div>
+</footer>
