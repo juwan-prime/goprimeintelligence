@@ -86,6 +86,7 @@
     display: inline-block;
     transition: background 0.2s;
   }
+
   .btn-call:hover { background: #D4B98A; }
 
   .btn-number {
@@ -137,14 +138,77 @@
     display: inline-block;
     transition: border-color 0.2s, color 0.2s, background 0.2s;
   }
+
   .btn-secondary:hover {
     border-color: #C9A876;
     color: #fff;
     background: rgba(201,168,118,0.06);
   }
 
-  .cover-footer { text-align: center; }
-  .cover-footer p { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.1); }
+  .legal-footer {
+    width: 100%;
+    max-width: 960px;
+    margin-top: 10px;
+    padding: 28px 22px;
+    border-top: 1px solid rgba(201,168,118,0.14);
+    border-bottom: 1px solid rgba(201,168,118,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(90deg, rgba(201,168,118,0.045), rgba(255,255,255,0.015));
+  }
+
+  .legal-brand {
+    text-align: left;
+  }
+
+  .legal-brand p:first-child {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 4px;
+  }
+
+  .legal-brand p:last-child {
+    font-size: 0.55rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.18);
+  }
+
+  .legal-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .legal-links a {
+    color: rgba(201,168,118,0.72);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .legal-links a:hover {
+    color: #fff;
+  }
+
+  .cover-footer {
+    text-align: center;
+    margin-top: 22px;
+  }
+
+  .cover-footer p {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.1);
+  }
 
   @media (max-width: 600px) {
     .cover { padding: 36px 16px 72px; }
@@ -155,17 +219,30 @@
     .btn-secondary { width: 100%; max-width: 320px; text-align: center; }
     .video-block { margin-bottom: 36px; }
     .divider { max-width: 280px; }
+
+    .legal-footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 26px 18px;
+    }
+
+    .legal-brand {
+      text-align: center;
+    }
+
+    .legal-links {
+      justify-content: center;
+      gap: 14px;
+    }
   }
 </style>
 
 <div class="cover">
 
-  <!-- LOGO -->
   <div class="cover-logo">
     <img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6a3dd68471d4b2cdff76af5f.png" alt="Prime Intelligence CRM">
   </div>
 
-  <!-- VIDEO BLOCK -->
   <div class="video-block">
     <iframe
       src="https://www.youtube.com/embed/ifJgfAl3ZvU?controls=1&rel=0&modestbranding=1"
@@ -176,32 +253,40 @@
     </iframe>
   </div>
 
-  <!-- TAGLINE -->
   <p class="cover-tagline">
     While I'm out networking and shooting listings —<br>
     <strong>Aria's handling my backend.</strong>
   </p>
 
-  <!-- PRIMARY CTA -->
   <div class="cover-cta-primary">
     <a href="tel:5718372665" class="btn-call">📞 Call &amp; Meet Aria Now</a>
     <a href="tel:5718372665" class="btn-number">(571) 837-2665</a>
   </div>
 
-  <!-- DIVIDER -->
   <div class="divider">
     <div class="divider-line"></div>
     <span class="divider-text">Explore</span>
     <div class="divider-line"></div>
   </div>
 
-  <!-- SECONDARY BUTTONS -->
   <div class="secondary-btns">
     <a href="aria.html" class="btn-secondary">Meet Aria →</a>
     <a href="pricing.html" class="btn-secondary">View Pricing →</a>
   </div>
 
-  <!-- FOOTER -->
+  <div class="legal-footer">
+    <div class="legal-brand">
+      <p>Prime Intelligence CRM</p>
+      <p>Lead capture • automation • realtor growth systems</p>
+    </div>
+
+    <div class="legal-links">
+      <a href="https://goprimeintelligence.com/privacy-policy">Privacy Policy</a>
+      <a href="https://goprimeintelligence.com/terms-of-service/index.html">Terms</a>
+      <a href="https://goprimeintelligence.com/legal/disclaimer/index.html">Disclaimer</a>
+    </div>
+  </div>
+
   <div class="cover-footer">
     <p>© 2026 PrimeView Media — Prime Intelligence CRM</p>
   </div>
