@@ -1,3 +1,32 @@
+
+<style id="pricing-click-fix">
+  /* Keep decorative hero layers from intercepting clicks */
+  .hero::before,
+  .hero::after {
+    pointer-events: none !important;
+  }
+
+  .hero,
+  .hero-content,
+  .hero-inner {
+    position: relative;
+  }
+
+  .hero-content,
+  .hero-inner,
+  .hero .btn-group,
+  .hero .hero-buttons,
+  .hero .cta-buttons,
+  .hero a,
+  .hero button {
+    z-index: 10 !important;
+    pointer-events: auto !important;
+  }
+
+  #pricing {
+    scroll-margin-top: 90px;
+  }
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -634,8 +663,8 @@
     respond faster, capture more opportunities, and stay visible — without adding more work to your day.
   </p>
   <div class="hero-btns">
-    <a href="#pricing" class="btn-primary">Compare Packages</a>
-    <a href="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI" class="btn-secondary">Take the Growth Checkup</a>
+    <a href="#pricing" class="btn-primary">COMPARE PACKAGES</a>
+    <a href="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI" class="btn-secondary">TAKE THE GROWTH CHECKUP</a>
   </div>
 </div>
 
