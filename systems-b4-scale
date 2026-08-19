@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Systems Before Scale | Prime Intelligence</title>
+
+  <meta
+    name="description"
+    content="Systems Before Scale by Prime Intelligence — five core systems every business should have in place before trying to scale."
+  />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #050505;
+      --bg-soft: #0d0d0d;
+      --panel: #121212;
+      --panel-2: #181818;
+      --gold: #d7ad4a;
+      --gold-light: #f2d67e;
+      --text: #ffffff;
+      --muted: #a7a7a7;
+      --line: rgba(255,255,255,.10);
+      --shadow: rgba(0,0,0,.45);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    /* TOP NAV */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5,5,5,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      width: 180px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mini-link {
+      color: #d1d1d1;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 13px;
+      transition: .2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      color: #111;
+      box-shadow: 0 10px 30px rgba(215,173,74,.16);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.25);
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 95px 0 80px;
+      background:
+        radial-gradient(circle at 75% 20%, rgba(215,173,74,.10), transparent 28%),
+        radial-gradient(circle at 20% 70%, rgba(255,255,255,.03), transparent 25%),
+        linear-gradient(180deg, #090909 0%, #050505 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(215,173,74,.08);
+      border-radius: 50%;
+      right: -280px;
+      top: -220px;
+      box-shadow:
+        0 0 0 80px rgba(215,173,74,.025),
+        0 0 0 160px rgba(215,173,74,.012);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 11px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7vw, 92px);
+      line-height: .94;
+      letter-spacing: -.055em;
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    .hero-copy {
+      color: #c2c2c2;
+      font-size: 18px;
+      max-width: 660px;
+      margin-bottom: 28px;
+    }
+
+    .hero-note {
+      font-size: 14px;
+      color: #838383;
+      max-width: 620px;
+    }
+
+    .hero-video-shell {
+      position: relative;
+      border: 1px solid rgba(215,173,74,.28);
+      border-radius: 24px;
+      padding: 10px;
+      background: linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+      box-shadow: 0 35px 90px rgba(0,0,0,.45);
+    }
+
+    .hero-video-shell::before {
+      content: "OVERVIEW";
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      z-index: 5;
+      background: rgba(0,0,0,.72);
+      color: var(--gold-light);
+      border: 1px solid rgba(215,173,74,.25);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .14em;
+    }
+
+    .hero-video {
+      width: 100%;
+      border-radius: 17px;
+      background: #111;
+      aspect-ratio: 9 / 16;
+      max-height: 690px;
+      object-fit: cover;
+    }
+
+    /* SECTION INTRO */
+    .section-intro {
+      padding: 90px 0 20px;
+      text-align: center;
+    }
+
+    .section-intro h2 {
+      font-size: clamp(38px, 5vw, 64px);
+      letter-spacing: -.045em;
+      line-height: 1;
+      margin-bottom: 17px;
+    }
+
+    .section-intro p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* LESSONS */
+    .lesson {
+      padding: 70px 0;
+      border-bottom: 1px solid rgba(255,255,255,.055);
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .lesson.reverse .lesson-video-wrap {
+      order: 2;
+    }
+
+    .lesson.reverse .lesson-copy {
+      order: 1;
+    }
+
+    .lesson-number {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .16em;
+      margin-bottom: 12px;
+    }
+
+    .lesson h3 {
+      font-size: clamp(36px, 4.5vw, 58px);
+      line-height: 1.03;
+      letter-spacing: -.045em;
+      margin-bottom: 20px;
+    }
+
+    .lesson-copy p {
+      color: #a9a9a9;
+      font-size: 16px;
+      margin-bottom: 24px;
+      max-width: 610px;
+    }
+
+    .takeaway {
+      border-left: 3px solid var(--gold);
+      padding: 15px 0 15px 18px;
+      color: #e0e0e0;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .lesson-video-wrap {
+      background: var(--panel);
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 25px 70px var(--shadow);
+    }
+
+    .lesson-video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      max-height: 660px;
+      object-fit: cover;
+      border-radius: 15px;
+      background: #111;
+    }
+
+    /* SURVEY */
+    .assessment {
+      padding: 105px 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(215,173,74,.08), transparent 25%),
+        linear-gradient(180deg, #0a0a0a, #050505);
+    }
+
+    .assessment-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .assessment-copy {
+      position: sticky;
+      top: 110px;
+    }
+
+    .assessment-copy h2 {
+      font-size: clamp(42px, 5vw, 66px);
+      line-height: 1;
+      letter-spacing: -.05em;
+      margin-bottom: 20px;
+    }
+
+    .assessment-copy p {
+      color: var(--muted);
+      max-width: 560px;
+      margin-bottom: 25px;
+    }
+
+    .assessment-points {
+      list-style: none;
+      display: grid;
+      gap: 13px;
+    }
+
+    .assessment-points li {
+      color: #c7c7c7;
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .assessment-points li::before {
+      content: "•";
+      color: var(--gold);
+      font-size: 24px;
+      line-height: 14px;
+    }
+
+    .survey-shell {
+      background: #fff;
+      border-radius: 20px;
+      padding: 10px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,.38);
+      min-height: 700px;
+    }
+
+    .survey-shell iframe {
+      width: 100%;
+      min-height: 690px;
+      border: none;
+      display: block;
+    }
+
+    /* DIRECT BOOK */
+    .book-section {
+      padding: 100px 0;
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(215,173,74,.16), transparent 45%),
+        #0b0b0b;
+      border-top: 1px solid rgba(215,173,74,.12);
+      border-bottom: 1px solid rgba(215,173,74,.12);
+    }
+
+    .book-section h2 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1;
+      letter-spacing: -.05em;
+      margin-bottom: 18px;
+    }
+
+    .book-section p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .book-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 42px 0;
+      background: #030303;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      width: 145px;
+    }
+
+    .footer-copy {
+      color: #6f6f6f;
+      font-size: 11px;
+      max-width: 640px;
+    }
+
+    .footer-link {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .lesson-grid,
+      .assessment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 40px;
+      }
+
+      .hero-copy {
+        max-width: none;
+      }
+
+      .hero-video {
+        max-height: none;
+      }
+
+      .lesson.reverse .lesson-video-wrap,
+      .lesson.reverse .lesson-copy {
+        order: initial;
+      }
+
+      .lesson-grid {
+        gap: 35px;
+      }
+
+      .lesson-video {
+        max-height: none;
+      }
+
+      .assessment-copy {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        min-height: 68px;
+      }
+
+      .logo {
+        width: 145px;
+      }
+
+      .top-actions .mini-link {
+        display: none;
+      }
+
+      .top-actions .btn {
+        min-height: 42px;
+        padding: 10px 14px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 65px 0 60px;
+      }
+
+      h1 {
+        font-size: 52px;
+      }
+
+      .hero-copy {
+        font-size: 16px;
+      }
+
+      .section-intro {
+        padding-top: 70px;
+      }
+
+      .lesson {
+        padding: 55px 0;
+      }
+
+      .lesson h3 {
+        font-size: 39px;
+      }
+
+      .assessment {
+        padding: 75px 0;
+      }
+
+      .survey-shell {
+        padding: 3px;
+      }
+
+      .survey-shell iframe {
+        min-height: 740px;
+      }
+
+      .book-section {
+        padding: 75px 0;
+      }
+
+      .book-buttons {
+        flex-direction: column;
+      }
+
+      .book-buttons .btn {
+        width: 100%;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+
+      <a href="https://goprimeintelligence.com" aria-label="Prime Intelligence Home">
+        <img
+          src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a41f67989d9cd8dc224ba24.png"
+          alt="Prime Intelligence"
+          class="logo"
+        >
+      </a>
+
+      <div class="top-actions">
+        <a href="#assessment" class="mini-link">Check Your Systems</a>
+
+        <a
+          href="https://api.primeview-media.com/widget/bookings/aria-prime-intelligence"
+          target="_blank"
+          class="btn btn-gold"
+        >
+          Book a Consultation
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">Prime Intelligence Presents</div>
+
+        <h1>
+          Systems<br>
+          Before <span class="gold">Scale.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Before you chase more leads, spend more on ads, hire more people,
+          or add more technology, make sure the systems underneath your
+          business are actually ready for growth.
+        </p>
+
+        <p class="hero-note">
+          Five practical systems that can help your business capture opportunities,
+          stay organized, communicate better, and build a stronger foundation.
+        </p>
+      </div>
+
+      <div class="hero-video-shell">
+        <video
+          class="hero-video"
+          src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a83b52cf1e423633fd2331e.mp4"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- INTRO -->
+  <section class="section-intro">
+    <div class="container">
+      <div class="eyebrow">The Five Systems</div>
+
+      <h2>
+        Get the foundation right.<br>
+        <span class="gold">Then scale.</span>
+      </h2>
+
+      <p>
+        Scaling a broken process doesn't fix it. It usually creates a bigger
+        version of the same problem. Start with the systems your business needs
+        to handle opportunities consistently.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- 01 LEAD CAPTURE -->
+  <section class="lesson">
+    <div class="container lesson-grid">
+
+      <div class="lesson-video-wrap">
+        <video
+          class="lesson-video"
+          src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a83b52c99074f5ef6d15f02.mp4"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
+
+      <div class="lesson-copy">
+        <div class="lesson-number">SYSTEM 01</div>
+
+        <h3>Lead Capture</h3>
+
+        <p>
+          Attention doesn't automatically become opportunity. Your business
+          needs a clear path for someone to raise their hand, request information,
+          schedule, call, message, or tell you what they need.
+        </p>
+
+        <div class="takeaway">
+          Don't generate more traffic until you know what you're doing with the traffic you already have.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 02 FOLLOW UP -->
+  <section class="lesson reverse">
+    <div class="container lesson-grid">
+
+      <div class="lesson-video-wrap">
+        <video
+          class="lesson-video"
+          src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a83b52ca6a03cda06e0f9cc.mp4"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
+
+      <div class="lesson-copy">
+        <div class="lesson-number">SYSTEM 02</div>
+
+        <h3>Follow-Up</h3>
+
+        <p>
+          Not every customer is ready today. A follow-up system helps make sure
+          interested people aren't forgotten simply because you're busy or they
+          weren't ready during the first conversation.
+        </p>
+
+        <div class="takeaway">
+          Don't lose tomorrow's customer because you forgot to follow up today.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 03 CRM -->
+  <section class="lesson">
+    <div class="container lesson-grid">
+
+      <div class="lesson-video-wrap">
+        <video
+          class="lesson-video"
+          src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a83b52c1082d6487779d34b.mp4"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
+
+      <div class="lesson-copy">
+        <div class="lesson-number">SYSTEM 03</div>
+
+        <h3>Your CRM</h3>
+
+        <p>
+          Leads shouldn't live across text messages, email, spreadsheets,
+          sticky notes, and your memory. A CRM gives your business one place
+          to organize contacts, conversations, opportunities, and activity.
+        </p>
+
+        <div class="takeaway">
+          You don't need the most complicated CRM. You need one your business will actually use.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 04 AUTOMATIC SCHEDULING -->
+  <section class="lesson reverse">
+    <div class="container lesson-grid">
+
+      <div class="lesson-video-wrap">
+        <video
+          class="lesson-video"
+          src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a83b52c1082d6487779d358.mp4"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
+
+      <div class="lesson-copy">
+        <div class="lesson-number">SYSTEM 04</div>
+
+        <h3>Automatic Scheduling</h3>
+
+        <p>
+          Customers shouldn't have to play phone tag just to get on your calendar.
+          A good scheduling system makes it easier to choose a time, receive
+          confirmations, get reminders, and stay connected.
+        </p>
+
+        <div class="takeaway">
+          Make it easy for people to do business with you.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 05 REPUTATION -->
+  <section class="lesson">
+    <div class="container lesson-grid">
+
+      <div class="lesson-video-wrap">
+        <video
+          class="lesson-video"
+          src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a83b52cb9de9ff19300e5cb.mp4"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
+
+      <div class="lesson-copy">
+        <div class="lesson-number">SYSTEM 05</div>
+
+        <h3>Reputation</h3>
+
+        <p>
+          Happy customers are one of your strongest marketing assets, but most
+          businesses leave reviews to chance. A reputation system helps make
+          requesting feedback consistent and gives future customers more proof
+          when they're researching your business.
+        </p>
+
+        <div class="takeaway">
+          Build your reputation one satisfied customer at a time.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ASSESSMENT -->
+  <section class="assessment" id="assessment">
+    <div class="container assessment-grid">
+
+      <div class="assessment-copy">
+
+        <div class="eyebrow">Business Growth Checkup</div>
+
+        <h2>
+          How strong are<br>
+          <span class="gold">your systems?</span>
+        </h2>
+
+        <p>
+          Take a few minutes and look at where your business stands today.
+          The goal isn't to buy every tool available. It's to identify where
+          the gaps actually are.
+        </p>
+
+        <ul class="assessment-points">
+          <li>Lead capture and customer response</li>
+          <li>Follow-up and missed opportunities</li>
+          <li>CRM and organization</li>
+          <li>Scheduling and communication</li>
+          <li>Reputation and customer reviews</li>
+        </ul>
+
+      </div>
+
+      <div class="survey-shell">
+
+        <iframe
+          src="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI"
+          scrolling="no"
+          id="vYqQxRaoPtBktnI50FiI"
+          title="Prime Intelligence Business Growth Checkup">
+        </iframe>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DIRECT BOOKING -->
+  <section class="book-section">
+    <div class="container">
+
+      <div class="eyebrow">Skip the Survey</div>
+
+      <h2>
+        Already know you need<br>
+        <span class="gold">better systems?</span>
+      </h2>
+
+      <p>
+        If you already know where your business needs help, you don't have to
+        complete the checkup first. Schedule a conversation and let's talk about it.
+      </p>
+
+      <div class="book-buttons">
+
+        <a
+          href="https://api.primeview-media.com/widget/bookings/aria-prime-intelligence"
+          target="_blank"
+          class="btn btn-gold"
+        >
+          Book a Consultation
+        </a>
+
+        <a
+          href="https://goprimeintelligence.com"
+          class="btn btn-outline"
+        >
+          Back to Prime Intelligence
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+
+      <div>
+        <a href="https://goprimeintelligence.com">
+          <img
+            src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a41f67989d9cd8dc224ba24.png"
+            alt="Prime Intelligence"
+            class="footer-logo"
+          >
+        </a>
+
+        <div class="footer-copy">
+          Systems Before Scale is an educational series by Prime Intelligence
+          focused on practical business systems, automation, customer communication,
+          reputation, and growth infrastructure.
+        </div>
+      </div>
+
+      <a
+        href="https://goprimeintelligence.com"
+        class="footer-link"
+      >
+        GoPrimeIntelligence.com
+      </a>
+
+    </div>
+  </footer>
+
+
+  <!-- HIGHLEVEL SURVEY EMBED SCRIPT -->
+  <script src="https://api.primeview-media.com/js/form_embed.js"></script>
+
+</body>
+</html>
