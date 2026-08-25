@@ -421,6 +421,111 @@
       gap: 12px;
     }
 
+
+    /* DIY / AFFILIATE PATH */
+    .diy-section {
+      padding: 100px 0;
+      background:
+        radial-gradient(circle at 80% 25%, rgba(215,173,74,.08), transparent 28%),
+        linear-gradient(180deg, #050505, #0a0a0a);
+      border-top: 1px solid rgba(255,255,255,.055);
+    }
+
+    .diy-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .diy-copy h2 {
+      font-size: clamp(40px, 5vw, 66px);
+      line-height: 1;
+      letter-spacing: -.05em;
+      margin-bottom: 20px;
+    }
+
+    .diy-copy p {
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 22px;
+    }
+
+    .diy-points {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin: 26px 0 30px;
+    }
+
+    .diy-points li {
+      color: #d0d0d0;
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .diy-points li::before {
+      content: "•";
+      color: var(--gold);
+      font-size: 24px;
+      line-height: 14px;
+    }
+
+    .diy-card {
+      background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.015));
+      border: 1px solid rgba(215,173,74,.28);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.38);
+    }
+
+    .diy-card .trial {
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .diy-card h3 {
+      font-size: 32px;
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+
+    .diy-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .affiliate-disclosure {
+      color: #757575;
+      font-size: 11px;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    .diy-video-shell {
+      margin-top: 28px;
+      background: var(--panel);
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      display: none;
+    }
+
+    .diy-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 12px;
+      background: #111;
+    }
+
     /* FOOTER */
     footer {
       padding: 42px 0;
@@ -456,7 +561,8 @@
     @media (max-width: 900px) {
       .hero-grid,
       .lesson-grid,
-      .assessment-grid {
+      .assessment-grid,
+      .diy-grid {
         grid-template-columns: 1fr;
       }
 
@@ -906,6 +1012,74 @@
   </section>
 
 
+
+  <!-- DIY / AFFILIATE PATH -->
+  <section class="diy-section" id="diy">
+    <div class="container diy-grid">
+
+      <div class="diy-copy">
+        <div class="eyebrow">Prefer To Build It Yourself?</div>
+
+        <h2>
+          Use the same kind of platform.<br>
+          <span class="gold">Build it your way.</span>
+        </h2>
+
+        <p>
+          Prime Intelligence is for businesses that want help implementing and managing
+          their systems. But if you prefer the DIY route, you can start with GoHighLevel
+          and build your own CRM, forms, calendars, automations, website tools, and more.
+        </p>
+
+        <ul class="diy-points">
+          <li>Start with a 14-day free trial</li>
+          <li>Build at your own pace</li>
+          <li>Set up your own CRM, forms, calendars, automations, and website tools</li>
+          <li>Upgrade to Prime Intelligence managed implementation later if you need help</li>
+        </ul>
+
+        <!-- OPTIONAL AVATAR VIDEO:
+             When your DIY avatar video is ready, paste its MP4 URL into the src below
+             and change style="display:none;" to style="display:block;" on the wrapper. -->
+        <div class="diy-video-shell" style="display:block;">
+          <video
+            class="diy-video"
+            src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a8e1348e1df8e540b894d08.mp4"
+            controls
+            playsinline
+            preload="metadata"
+          ></video>
+        </div>
+      </div>
+
+      <div class="diy-card">
+        <div class="trial">14-Day Free Trial</div>
+        <h3>Want the software and prefer to build it yourself?</h3>
+
+        <p>
+          Start your GoHighLevel trial and explore the platform directly. This is the
+          DIY option — Prime Intelligence managed setup and support are separate services.
+        </p>
+
+        <a
+          href="https://www.gohighlevel.com/?fp_ref=juwan-davis-photography70"
+          target="_blank"
+          rel="noopener sponsored"
+          class="btn btn-gold"
+        >
+          Start Your 14-Day Free Trial
+        </a>
+
+        <div class="affiliate-disclosure">
+          Affiliate disclosure: This page contains an affiliate link. Prime Intelligence
+          may receive a commission if you sign up through this link, at no additional cost to you.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
@@ -929,6 +1103,7 @@
       <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
         <a href="https://goprimeintelligence.com" class="footer-link">GoPrimeIntelligence.com</a>
         <a href="https://goprimeintelligence.com/privacy-policy" class="footer-link">Privacy Policy</a>
+        <a href="#diy" class="footer-link">DIY Option</a>
         <a href="https://goprimeintelligence.com/terms-of-service/" class="footer-link">Terms of Service</a>
       </div>
 
