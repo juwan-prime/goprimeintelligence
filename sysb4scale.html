@@ -668,6 +668,78 @@
         flex-direction: column;
       }
     }
+  
+    .site-links {
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    .site-links a {
+      color:#cfcfcf;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      transition:.2s ease;
+    }
+    .site-links a:hover { color:var(--gold-light); }
+
+    .topbar-main {
+      display:flex;
+      align-items:center;
+      gap:28px;
+      min-width:0;
+    }
+
+    .avatar-path {
+      padding: 90px 0;
+      background:
+        radial-gradient(circle at 78% 30%, rgba(215,173,74,.09), transparent 28%),
+        linear-gradient(180deg,#080808,#0c0c0c);
+      border-top:1px solid rgba(255,255,255,.055);
+      border-bottom:1px solid rgba(255,255,255,.055);
+    }
+    .avatar-path-grid {
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:60px;
+      align-items:center;
+    }
+    .avatar-path h2 {
+      font-size:clamp(40px,5vw,66px);
+      line-height:1;
+      letter-spacing:-.05em;
+      margin-bottom:20px;
+    }
+    .avatar-path p {
+      color:var(--muted);
+      max-width:650px;
+      margin-bottom:24px;
+    }
+    .avatar-path-card {
+      background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+      border:1px solid rgba(215,173,74,.28);
+      border-radius:24px;
+      padding:34px;
+      box-shadow:0 30px 80px rgba(0,0,0,.35);
+    }
+    .avatar-path-card h3 {
+      font-size:30px;
+      line-height:1.05;
+      margin-bottom:14px;
+    }
+    .avatar-path-card p { font-size:14px; }
+    @media(max-width:900px){
+      .topbar-inner{align-items:flex-start;padding:14px 0}
+      .topbar-main{flex-direction:column;align-items:flex-start;gap:12px}
+      .site-links{gap:12px}
+      .avatar-path-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .site-links{display:none}
+    }
+
   </style>
 </head>
 
@@ -676,18 +748,26 @@
   <!-- NAV -->
   <header class="topbar">
     <div class="container topbar-inner">
+      <div class="topbar-main">
+        <a href="https://goprimeintelligence.com" aria-label="Prime Intelligence Home">
+          <img
+            src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a41f67989d9cd8dc224ba24.png"
+            alt="Prime Intelligence"
+            class="logo"
+          >
+        </a>
 
-      <a href="https://goprimeintelligence.com" aria-label="Prime Intelligence Home">
-        <img
-          src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a41f67989d9cd8dc224ba24.png"
-          alt="Prime Intelligence"
-          class="logo"
-        >
-      </a>
+        <nav class="site-links" aria-label="Prime Intelligence">
+          <a href="https://goprimeintelligence.com/">Home</a>
+          <a href="https://goprimeintelligence.com/services">Services</a>
+          <a href="https://goprimeintelligence.com/aria">Aria</a>
+          <a href="https://goprimeintelligence.com/avatar">Avatar</a>
+          <a href="https://goprimeintelligence.com/pricing">Pricing</a>
+        </nav>
+      </div>
 
       <div class="top-actions">
         <a href="#assessment" class="mini-link">Check Your Systems</a>
-
         <a
           href="https://api.primeview-media.com/widget/bookings/aria-prime-intelligence"
           target="_blank"
@@ -696,8 +776,7 @@
           Book a Consultation
         </a>
       </div>
-
-    </div>
+</div>
   </header>
 
 
@@ -929,6 +1008,40 @@
   </section>
 
 
+
+  <!-- AI AVATAR PATH -->
+  <section class="avatar-path">
+    <div class="container avatar-path-grid">
+      <div>
+        <div class="eyebrow">Another Way To Show Up Consistently</div>
+        <h2>
+          Your systems can run behind the scenes.<br>
+          <span class="gold">Your avatar can help you stay visible.</span>
+        </h2>
+        <p>
+          Once the operational foundation is in place, consistent communication becomes easier to scale too.
+          Prime Intelligence can create an authorized AI avatar and custom voice for social content,
+          training, marketing, website videos, and other repeatable business communication.
+        </p>
+        <a href="https://goprimeintelligence.com/avatar" class="btn btn-gold">
+          Explore AI Avatar Services
+        </a>
+      </div>
+
+      <div class="avatar-path-card">
+        <div class="eyebrow">AI Avatar + Voice</div>
+        <h3>Record once. Create more without starting from scratch every time.</h3>
+        <p>
+          Professional recording, custom voice capture, avatar setup, testing, and hands-on training
+          are available through dedicated one-time Avatar packages.
+        </p>
+        <a href="https://goprimeintelligence.com/avatar#packages" class="btn btn-outline">
+          View Avatar Packages
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ASSESSMENT -->
   <section class="assessment" id="assessment">
     <div class="container assessment-grid">
@@ -1105,7 +1218,12 @@
         <a href="https://goprimeintelligence.com/privacy-policy" class="footer-link">Privacy Policy</a>
         <a href="#diy" class="footer-link">DIY Option</a>
         <a href="https://goprimeintelligence.com/terms-of-service/" class="footer-link">Terms of Service</a>
-      </div>
+      
+        <a href="https://goprimeintelligence.com/services" class="footer-link">Services</a>
+        <a href="https://goprimeintelligence.com/aria" class="footer-link">Aria</a>
+        <a href="https://goprimeintelligence.com/avatar" class="footer-link">Avatar</a>
+        <a href="https://goprimeintelligence.com/pricing" class="footer-link">Pricing</a>
+</div>
 
     </div>
   </footer>
