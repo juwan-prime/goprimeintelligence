@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -47,13 +46,14 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.03}h1{font-size:cl
 .book-cover{width:min(100%,410px);margin:auto;filter:drop-shadow(0 28px 40px rgba(0,0,0,.5))}.edition-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}.edition{border:1px solid var(--l);padding:18px;text-decoration:none;background:#0a0a0a}.edition strong{display:block;color:var(--g);font-family:'Cormorant Garamond',serif;font-size:1.35rem}.edition span{font-size:.64rem;color:var(--m);text-transform:uppercase;letter-spacing:.06em}
 .training-media{border:1px solid var(--l);padding:9px;background:#080808}.training-media video{width:100%;aspect-ratio:16/9;object-fit:cover}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.chip{border:1px solid rgba(201,168,118,.38);padding:8px 10px;color:var(--g);font-size:.59rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
 .status-box{padding:30px;border:1px solid var(--l);background:#090909}.status-row{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.07)}.status-row:last-child{border:0}.status-row strong{display:block;color:var(--g);font-family:'Cormorant Garamond',serif;font-size:1.5rem}.status-row span{color:var(--m);font-size:.83rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch}.price-card{position:relative;display:flex;flex-direction:column;padding:32px 26px;border:1px solid var(--l);background:#0a0a0a}.price-card.featured{border-color:var(--g);box-shadow:0 0 0 1px rgba(201,168,118,.18)}.price-badge{position:absolute;top:0;right:20px;transform:translateY(-50%);background:var(--g);color:#000;padding:6px 10px;font-size:.55rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.price-card h3{font-size:2rem;margin-bottom:4px}.price-kicker{color:var(--g);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}.price{font-family:'Cormorant Garamond',serif;font-size:3.1rem;font-weight:700;line-height:1;color:#fff}.price small{font-family:Montserrat,sans-serif;font-size:.7rem;font-weight:500;color:var(--m)}.setup{color:var(--gl);font-size:.74rem;margin:7px 0 18px}.price-card ul{list-style:none;margin:0 0 24px;flex:1}.price-card li{position:relative;padding:7px 0 7px 18px;color:var(--m);font-size:.78rem;border-bottom:1px solid rgba(255,255,255,.05)}.price-card li:before{content:"✓";position:absolute;left:0;color:var(--g);font-weight:700}.price-actions{display:grid;gap:9px}.agreement-note{max-width:900px;margin:26px auto 0;text-align:center;color:rgba(255,255,255,.48);font-size:.7rem}.agreement-note a{color:var(--g)}
 .eco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.eco{padding:30px;border:1px solid var(--l);background:#0b0b0b}.eco-logo{height:72px;display:flex;align-items:center;margin-bottom:22px}.eco-logo img{max-height:64px;max-width:190px;object-fit:contain}.eco h3{font-size:1.8rem;margin-bottom:10px}.eco p{color:var(--m);font-size:.84rem;margin-bottom:20px}.eco a{color:var(--g);text-decoration:none;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .bio-photo{border:1px solid var(--l);padding:10px;background:#080808}.bio-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}.bio-copy p{color:var(--m);font-size:.91rem;margin-bottom:15px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:22px}.stat{border:1px solid var(--l);padding:15px}.stat strong{display:block;color:var(--g);font-family:'Cormorant Garamond',serif;font-size:1.35rem}.stat span{color:var(--m);font-size:.67rem}
 .faq{max-width:900px;margin:auto}.faq details{border-top:1px solid var(--l);padding:20px 0}.faq details:last-child{border-bottom:1px solid var(--l)}.faq summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:1.45rem}.faq details p{color:var(--m);padding-top:12px;font-size:.87rem}
 .final{text-align:center;padding:105px 0;background:linear-gradient(180deg,#0b0b0b,#000)}.final .head{margin-left:auto;margin-right:auto}.final .btn-row{justify-content:center}
 footer{border-top:1px solid var(--l);padding:36px 0}.foot{display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}.foot-links{display:flex;gap:16px;flex-wrap:wrap}.foot-links a{text-decoration:none;color:rgba(255,255,255,.45);font-size:.61rem;text-transform:uppercase;letter-spacing:.07em}
 .note{margin-top:22px;color:rgba(255,255,255,.38);font-size:.68rem;line-height:1.6}
-@media(max-width:980px){.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#050505;flex-direction:column;align-items:stretch;gap:0;padding:8px 18px 18px}.nav-links.open{display:flex}.nav-links a{display:block;padding:12px 4px}.menu{display:block}.p-grid{grid-template-columns:repeat(2,1fr)}.eco-grid{grid-template-columns:1fr}.story-grid,.book-grid,.training-grid,.ce-grid,.bio-grid{grid-template-columns:1fr}.trust-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:980px){.pricing-grid{grid-template-columns:1fr}.price-card{max-width:720px;width:100%;margin:0 auto}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#050505;flex-direction:column;align-items:stretch;gap:0;padding:8px 18px 18px}.nav-links.open{display:flex}.nav-links a{display:block;padding:12px 4px}.menu{display:block}.p-grid{grid-template-columns:repeat(2,1fr)}.eco-grid{grid-template-columns:1fr}.story-grid,.book-grid,.training-grid,.ce-grid,.bio-grid{grid-template-columns:1fr}.trust-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.wrap,.nav-in{padding-left:18px;padding-right:18px}.section{padding:70px 0}.hero{padding:125px 0 65px;min-height:82vh}.p-grid{grid-template-columns:1fr}.edition-grid{grid-template-columns:1fr}.btn-row{flex-direction:column}.btn{width:100%}.media-band{min-height:480px}.stats{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero video{display:none}.hero{background:linear-gradient(135deg,#080808,#17130f)}}
 </style>
@@ -81,6 +81,7 @@ footer{border-top:1px solid var(--l);padding:36px 0}.foot{display:flex;justify-c
       <li><a href="#book">Books</a></li>
       <li><a href="#training">Free Course</a></li>
       <li><a href="#ce">CE Course</a></li>
+      <li><a href="#pricing">CRM Plans</a></li>
       <li><a href="#ecosystem">Resources</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="https://goprimeintelligence.com/">Prime Intelligence</a></li>
@@ -205,6 +206,50 @@ footer{border-top:1px solid var(--l);padding:36px 0}.foot{display:flex;justify-c
   </div>
 </section>
 
+<section class="section alt" id="pricing">
+  <div class="wrap">
+    <div class="head center">
+      <div class="eyebrow">Five P's CRM + Implementation</div>
+      <h2 class="section-title">Choose how much you want to <span>build yourself.</span></h2>
+      <p class="lead">Start with the Five P's system and templates, have Prime Intelligence build the implementation for you, or add AI Voice for another layer of call handling and lead capture.</p>
+    </div>
+    <div class="pricing-grid">
+      <article class="price-card">
+        <div class="price-kicker">Template / Self-Implementation</div>
+        <h3>Five P's Playbook CRM</h3>
+        <div class="price">$297 <small>/ month</small></div>
+        <div class="setup">+ $297 one-time setup fee · $594 due today</div>
+        <ul>
+          <li>Five P's Realtor CRM</li><li>Lead pipeline & contact management</li><li>Automated lead follow-up</li><li>Missed-call text back</li><li>Calendar & appointment booking</li><li>Reputation & review tools</li><li>Lead capture forms</li><li>Five P's Realtor Website Template</li><li>Lead Funnel Template</li><li>A2P setup guidance & onboarding</li><li>Five P's training & resources</li><li>Five P's Community access when available</li>
+        </ul>
+        <div class="price-actions"><a class="btn btn-gold" href="https://api.primeview-media.com/payment-link/6ab673f6c0e70c7fefb70895" target="_blank" rel="noopener">Start Playbook CRM</a><a class="btn btn-outline" href="https://goprimeintelligence.com/fiveps/agreement">View Service Agreement</a></div>
+      </article>
+      <article class="price-card featured">
+        <div class="price-badge">Done For You</div>
+        <div class="price-kicker">Implementation Included</div>
+        <h3>Five P's Playbook Pro</h3>
+        <div class="price">$497 <small>/ month</small></div>
+        <div class="setup">+ $500 one-time setup fee · $997 due today</div>
+        <ul>
+          <li>Everything in the Five P's Realtor CRM</li><li>Customized lead pipeline & contact management</li><li>Done-for-you system configuration</li><li>Automated lead follow-up</li><li>Missed-call text back</li><li>Calendar & appointment booking</li><li>Reputation & review tools</li><li>Lead capture forms</li><li>Custom Realtor website</li><li>Done-for-you lead funnel</li><li>A2P setup & onboarding assistance</li><li>Five P's training & resources</li><li>Five P's Community access when available</li>
+        </ul>
+        <div class="price-actions"><a class="btn btn-gold" href="https://api.primeview-media.com/payment-link/6ab674c9c0e70c7fefb70898" target="_blank" rel="noopener">Choose Playbook Pro</a><a class="btn btn-outline" href="https://goprimeintelligence.com/fiveps/agreement">View Service Agreement</a></div>
+      </article>
+      <article class="price-card">
+        <div class="price-kicker">Done For You + AI Voice</div>
+        <h3>Five P's Playbook AI</h3>
+        <div class="price">$597 <small>/ month</small></div>
+        <div class="setup">+ $500 one-time setup fee · $1,097 due today</div>
+        <ul>
+          <li>Everything in Five P's Playbook Pro</li><li>AI Voice setup</li><li>AI-powered call handling</li><li>Lead information capture</li><li>Appointment scheduling & routing</li><li>Custom Realtor website & funnel</li><li>System configuration & implementation</li><li>Five P's training & resources</li><li>Five P's Community access when available</li><li>AI/phone/SMS usage may carry applicable usage charges or limits</li>
+        </ul>
+        <div class="price-actions"><a class="btn btn-gold" href="https://api.primeview-media.com/payment-link/6ab67543baea3cadef54f45f" target="_blank" rel="noopener">Choose Playbook AI</a><a class="btn btn-outline" href="https://goprimeintelligence.com/fiveps/agreement">View Service Agreement</a></div>
+      </article>
+    </div>
+    <p class="agreement-note">All plans are recurring subscriptions. By purchasing, customers agree to the Five P's Service Agreement, including recurring billing and cancellation terms. <a href="https://goprimeintelligence.com/fiveps/agreement">Review the Service Agreement →</a></p>
+  </div>
+</section>
+
 <section class="section alt" id="ecosystem">
   <div class="wrap">
     <div class="head center">
@@ -243,7 +288,8 @@ footer{border-top:1px solid var(--l);padding:36px 0}.foot{display:flex;justify-c
       <details><summary>Is the free Five P's course available now?</summary><p>Not yet. The free community course is currently in development and is planned to include nearly three hours of training plus resources and ongoing education.</p></details>
       <details><summary>Is the course approved for CE credit?</summary><p>West Virginia CE approval is currently pending. The Virginia CE application has not yet been submitted; submission is planned. The dedicated CE page will carry the current status as approvals and submissions change.</p></details>
       <details><summary>Is this only about technology and AI?</summary><p>No. Technology is one part of the framework. The Five P's begins with branding, professional presentation, property media and marketing, then connects those areas to systems, follow-up, automation and practical AI.</p></details>
-      <details><summary>Where do I go for CRM, automation or AI implementation?</summary><p>Prime Intelligence is the implementation side for CRM, automation, AI voice, websites, reputation, follow-up and business systems.</p></details>
+      <details><summary>What Five P's CRM plans are available?</summary><p>Five P's Playbook CRM is $297 setup plus $297/month and is the template/self-implementation option. Playbook Pro is $500 setup plus $497/month and adds done-for-you implementation, a custom Realtor website and customized funnel. Playbook AI is $500 setup plus $597/month and adds AI Voice to the Pro implementation. Applicable AI, phone, SMS, email or other usage-based services may carry additional usage charges or limits.</p></details>
+      <details><summary>Where do I go for CRM, automation or AI implementation?</summary><p>Prime Intelligence is the implementation side for the Five P's CRM plans, automation, AI voice, websites, reputation, follow-up and business systems. See the CRM Plans section above for the three Five P's implementation levels.</p></details>
     </div>
   </div>
 </section>
@@ -251,13 +297,13 @@ footer{border-top:1px solid var(--l);padding:36px 0}.foot{display:flex;justify-c
 <section class="final">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Choose Your Next Step</div><h2 class="section-title">Read it. Learn it. <span>Implement it.</span></h2><p class="lead">Start with the book, return for the free community course as it develops, explore the CE course, or use the connected businesses when you are ready to put the ideas into practice.</p></div>
-    <div class="btn-row"><a class="btn btn-gold" href="#book">Get the Book</a><a class="btn btn-outline" href="#training">Free Training</a><a class="btn btn-outline" href="https://go.primeview-media.com/realtor-ce">CE Course</a><a class="btn btn-outline" href="https://goprimeintelligence.com/">Prime Intelligence</a></div>
+    <div class="btn-row"><a class="btn btn-gold" href="#book">Get the Book</a><a class="btn btn-outline" href="#training">Free Training</a><a class="btn btn-outline" href="https://go.primeview-media.com/realtor-ce">CE Course</a><a class="btn btn-outline" href="#pricing">CRM Plans</a><a class="btn btn-outline" href="https://goprimeintelligence.com/">Prime Intelligence</a></div>
   </div>
 </section>
 
 <footer><div class="wrap foot">
   <a class="brand" href="https://goprimeintelligence.com/">Prime <span>Intelligence</span></a>
-  <div class="foot-links"><a href="https://goprimeintelligence.com/fiveps">Five P's</a><a href="https://go.primeview-media.com/realtor-ce">CE Course</a><a href="https://primeview-media.com/">Prime View Media</a><a href="https://juwandavisphotography.com/">Juwan Davis Photography</a><a href="https://goprimeintelligence.com/">Prime Intelligence</a><a href="https://goprimeintelligence.com/privacy-policy">Privacy</a><a href="https://goprimeintelligence.com/terms-of-service/">Terms</a></div>
+  <div class="foot-links"><a href="https://goprimeintelligence.com/fiveps">Five P's</a><a href="https://go.primeview-media.com/realtor-ce">CE Course</a><a href="https://primeview-media.com/">Prime View Media</a><a href="https://juwandavisphotography.com/">Juwan Davis Photography</a><a href="https://goprimeintelligence.com/">Prime Intelligence</a><a href="https://goprimeintelligence.com/fiveps/agreement">Service Agreement</a><a href="https://goprimeintelligence.com/privacy-policy">Privacy</a><a href="https://goprimeintelligence.com/terms-of-service/">Terms</a></div>
 </div></footer>
 <script>
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
