@@ -14,81 +14,81 @@
 
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --b:#000;
-  --p:#0d0d0d;
-  --p2:#151515;
-  --g:#C9A876;
-  --gl:#D8BE94;
-  --w:#fff;
-  --m:rgba(255,255,255,.66);
-  --l:rgba(201,168,118,.18);
+--b:#000;
+--p:#0d0d0d;
+--p2:#151515;
+--g:#C9A876;
+--gl:#D8BE94;
+--w:#fff;
+--m:rgba(255,255,255,.66);
+--l:rgba(201,168,118,.18);
 }
 html{scroll-behavior:smooth}
 body{
-  background:var(--b);
-  color:var(--w);
-  font-family:Montserrat,sans-serif;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
+background:var(--b);
+color:var(--w);
+font-family:Montserrat,sans-serif;
+line-height:1.65;
+-webkit-font-smoothing:antialiased;
 }
 a{color:inherit}
 img,video{max-width:100%;display:block}
 
 nav{
-  position:fixed;inset:0 0 auto 0;z-index:1000;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:16px 42px;background:rgba(0,0,0,.88);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--l);
+position:fixed;inset:0 0 auto 0;z-index:1000;
+display:flex;align-items:center;justify-content:space-between;
+padding:16px 42px;background:rgba(0,0,0,.88);
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--l);
 }
 .brand{
-  text-decoration:none;
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;
-  letter-spacing:.04em;
-  font-weight:700;
+text-decoration:none;
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+letter-spacing:.04em;
+font-weight:700;
 }
 .brand span{color:var(--g);font-style:italic}
 .nav-links{display:flex;gap:24px;align-items:center;list-style:none}
 .nav-links a{
-  text-decoration:none;font-size:.67rem;font-weight:600;
-  letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)
+text-decoration:none;font-size:.67rem;font-weight:600;
+letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)
 }
 .nav-links a:hover{color:var(--g)}
 .nav-cta{background:var(--g);color:#000!important;padding:10px 17px}
 .mobile-toggle{
-  display:none;background:none;border:1px solid var(--l);
-  color:var(--g);padding:8px 10px
+display:none;background:none;border:1px solid var(--l);
+color:var(--g);padding:8px 10px
 }
 
 .hero{
-  min-height:92vh;padding:145px 24px 88px;
-  display:flex;align-items:center;
-  background:
-    radial-gradient(circle at 68% 40%,rgba(201,168,118,.12),transparent 30%),
-    linear-gradient(180deg,#050505 0%,#000 100%);
-  border-bottom:1px solid var(--l);
+min-height:92vh;padding:145px 24px 88px;
+display:flex;align-items:center;
+background:
+radial-gradient(circle at 68% 40%,rgba(201,168,118,.12),transparent 30%),
+linear-gradient(180deg,#050505 0%,#000 100%);
+border-bottom:1px solid var(--l);
 }
 .hero-grid{
-  max-width:1180px;margin:auto;width:100%;
-  display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center;
+max-width:1180px;margin:auto;width:100%;
+display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center;
 }
 .eyebrow{
-  color:var(--g);font-size:.65rem;font-weight:700;
-  letter-spacing:.23em;text-transform:uppercase;margin-bottom:17px
+color:var(--g);font-size:.65rem;font-weight:700;
+letter-spacing:.23em;text-transform:uppercase;margin-bottom:17px
 }
 h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.05}
 h1{font-size:clamp(3.2rem,6.6vw,6.25rem);margin-bottom:24px}
 h1 span,h2 span{color:var(--g);font-style:italic}
 .hero-copy{
-  max-width:690px;color:var(--m);
-  font-size:clamp(.96rem,1.5vw,1.08rem);font-weight:300;margin-bottom:30px
+max-width:690px;color:var(--m);
+font-size:clamp(.96rem,1.5vw,1.08rem);font-weight:300;margin-bottom:30px
 }
 .btn-row{display:flex;flex-wrap:wrap;gap:12px}
 .btn{
-  display:inline-block;text-decoration:none;padding:14px 24px;
-  font-size:.67rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
-  transition:.2s;border:none;cursor:pointer
+display:inline-block;text-decoration:none;padding:14px 24px;
+font-size:.67rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+transition:.2s;border:none;cursor:pointer
 }
 .btn-gold{background:var(--g);color:#000}
 .btn-gold:hover{background:var(--gl)}
@@ -96,44 +96,44 @@ h1 span,h2 span{color:var(--g);font-style:italic}
 .btn-outline:hover{border-color:var(--g);color:#fff}
 
 .promo-shell{
-  border:1px solid var(--l);
-  padding:10px;background:#080808;
-  box-shadow:0 25px 70px rgba(0,0,0,.38);
+border:1px solid var(--l);
+padding:10px;background:#080808;
+box-shadow:0 25px 70px rgba(0,0,0,.38);
 }
 .promo-placeholder{
-  aspect-ratio:16/9;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  background:
-    radial-gradient(circle at 50% 40%,rgba(201,168,118,.14),transparent 42%),
-    #050505;
-  border:1px solid rgba(255,255,255,.05);
-  padding:30px;color:rgba(255,255,255,.55);
+aspect-ratio:16/9;
+display:flex;align-items:center;justify-content:center;text-align:center;
+background:
+radial-gradient(circle at 50% 40%,rgba(201,168,118,.14),transparent 42%),
+#050505;
+border:1px solid rgba(255,255,255,.05);
+padding:30px;color:rgba(255,255,255,.55);
 }
 .promo-placeholder strong{
-  display:block;color:var(--g);font-family:'Cormorant Garamond',serif;
-  font-size:2rem;margin-bottom:8px
+display:block;color:var(--g);font-family:'Cormorant Garamond',serif;
+font-size:2rem;margin-bottom:8px
 }
 .video-note{
-  color:rgba(255,255,255,.35);
-  font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
-  text-align:center;margin-top:10px
+color:rgba(255,255,255,.35);
+font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
+text-align:center;margin-top:10px
 }
 
 .promise{
-  padding:40px 24px;background:var(--p);
-  border-bottom:1px solid var(--l)
+padding:40px 24px;background:var(--p);
+border-bottom:1px solid var(--l)
 }
 .promise-grid{
-  max-width:1050px;margin:auto;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center
+max-width:1050px;margin:auto;
+display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center
 }
 .promise-item strong{
-  display:block;color:var(--g);
-  font-family:'Cormorant Garamond',serif;font-size:1.65rem
+display:block;color:var(--g);
+font-family:'Cormorant Garamond',serif;font-size:1.65rem
 }
 .promise-item span{
-  color:rgba(255,255,255,.48);
-  font-size:.62rem;text-transform:uppercase;letter-spacing:.1em
+color:rgba(255,255,255,.48);
+font-size:.62rem;text-transform:uppercase;letter-spacing:.1em
 }
 
 .section{padding:92px 24px}
@@ -144,307 +144,337 @@ h1 span,h2 span{color:var(--g);font-style:italic}
 .section-copy{max-width:760px;margin:0 auto;color:var(--m);font-weight:300}
 
 .card-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
-  margin-top:42px
+display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+margin-top:42px
 }
 .card{
-  background:#0d0d0d;padding:32px 28px;
-  border-top:2px solid transparent
+background:#0d0d0d;padding:32px 28px;
+border-top:2px solid transparent
 }
 .card:hover{border-top-color:var(--g);background:#121212}
 .card-number{
-  color:rgba(201,168,118,.28);
-  font-family:'Cormorant Garamond',serif;font-size:3rem;line-height:1
+color:rgba(201,168,118,.28);
+font-family:'Cormorant Garamond',serif;font-size:3rem;line-height:1
 }
 .card h3{font-size:1.7rem;margin:10px 0 12px}
 .card p{color:var(--m);font-size:.86rem;font-weight:300;margin-bottom:18px}
 .card a{color:var(--g);text-decoration:none;font-size:.69rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 
 .systems-grid,.aria-grid,.about-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center
+display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center
 }
 .feature-box{
-  padding:30px;background:#090909;border:1px solid var(--l)
+padding:30px;background:#090909;border:1px solid var(--l)
 }
 .feature-box h3{font-size:2rem;margin-bottom:14px}
 .feature-box p{color:var(--m);font-size:.9rem;margin-bottom:20px}
 
 .quote{
-  margin-top:24px;padding:17px 19px;
-  border-left:2px solid var(--g);
-  background:rgba(201,168,118,.055);
-  color:rgba(255,255,255,.76);font-size:.86rem
+margin-top:24px;padding:17px 19px;
+border-left:2px solid var(--g);
+background:rgba(201,168,118,.055);
+color:rgba(255,255,255,.76);font-size:.86rem
 }
 
 .ce-strip{
-  padding:78px 24px;
-  background:linear-gradient(90deg,#0b0b0b,#17130f,#0b0b0b);
-  border-top:1px solid var(--l);border-bottom:1px solid var(--l)
+padding:78px 24px;
+background:linear-gradient(90deg,#0b0b0b,#17130f,#0b0b0b);
+border-top:1px solid var(--l);border-bottom:1px solid var(--l)
 }
 .ce-grid{
-  max-width:1120px;margin:auto;
-  display:grid;grid-template-columns:1.25fr .75fr;gap:46px;align-items:center
+max-width:1120px;margin:auto;
+display:grid;grid-template-columns:1.25fr .75fr;gap:46px;align-items:center
 }
 .ce-strip h2{font-size:clamp(2.2rem,4vw,3.7rem);margin-bottom:15px}
 .ce-strip p{color:var(--m);max-width:760px}
 .status{
-  display:inline-block;margin-top:16px;padding:9px 13px;
-  border:1px solid rgba(201,168,118,.4);
-  color:var(--g);font-size:.64rem;font-weight:700;letter-spacing:.12em;
-  text-transform:uppercase
+display:inline-block;margin-top:16px;padding:9px 13px;
+border:1px solid rgba(201,168,118,.4);
+color:var(--g);font-size:.64rem;font-weight:700;letter-spacing:.12em;
+text-transform:uppercase
 }
 
 .about-photo{
-  border:1px solid var(--l);padding:10px;background:#080808;
+border:1px solid var(--l);padding:10px;background:#080808;
 }
 .about-photo img{
-  width:100%;aspect-ratio:4/5;object-fit:cover
+width:100%;aspect-ratio:4/5;object-fit:cover
 }
 .about-copy p{color:var(--m);font-size:.92rem;font-weight:300;margin-bottom:15px}
 
 .final-cta{
-  padding:105px 24px;text-align:center;background:#050505;
-  border-top:1px solid var(--l)
+padding:105px 24px;text-align:center;background:#050505;
+border-top:1px solid var(--l)
 }
 .final-cta h2{font-size:clamp(2.2rem,4vw,3.8rem);margin-bottom:18px}
 .final-cta p{max-width:710px;margin:0 auto 28px;color:var(--m)}
 
 footer{
-  padding:35px 42px;display:flex;align-items:center;justify-content:space-between;
-  gap:20px;flex-wrap:wrap;border-top:1px solid rgba(201,168,118,.12)
+padding:35px 42px;display:flex;align-items:center;justify-content:space-between;
+gap:20px;flex-wrap:wrap;border-top:1px solid rgba(201,168,118,.12)
 }
 .footer-links{display:flex;gap:18px;list-style:none;flex-wrap:wrap}
 .footer-links a{
-  text-decoration:none;color:rgba(255,255,255,.38);
-  font-size:.64rem;text-transform:uppercase;letter-spacing:.09em
+text-decoration:none;color:rgba(255,255,255,.38);
+font-size:.64rem;text-transform:uppercase;letter-spacing:.09em
 }
 .footer-links a:hover{color:var(--g)}
 .footer-copy{color:rgba(255,255,255,.28);font-size:.65rem}
 
 @media(max-width:900px){
-  nav{padding:14px 18px}
-  .mobile-toggle{display:block}
-  .nav-links{
-    display:none;position:absolute;top:69px;left:0;right:0;
-    flex-direction:column;align-items:stretch;gap:0;
-    background:#050505;border-bottom:1px solid var(--l)
-  }
-  .nav-links.open{display:flex}
-  .nav-links li a{display:block;padding:15px 20px}
-  .hero-grid,.systems-grid,.aria-grid,.about-grid,.ce-grid{grid-template-columns:1fr}
-  .card-grid{grid-template-columns:1fr}
-  .promise-grid{grid-template-columns:repeat(2,1fr)}
+nav{padding:14px 18px}
+.mobile-toggle{display:block}
+.nav-links{
+display:none;position:absolute;top:69px;left:0;right:0;
+flex-direction:column;align-items:stretch;gap:0;
+background:#050505;border-bottom:1px solid var(--l)
+}
+.nav-links.open{display:flex}
+.nav-links li a{display:block;padding:15px 20px}
+.hero-grid,.systems-grid,.aria-grid,.about-grid,.ce-grid{grid-template-columns:1fr}
+.card-grid{grid-template-columns:1fr}
+.promise-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:600px){
-  .hero{padding:115px 16px 68px}
-  .section{padding:68px 16px}
-  .promise-grid{grid-template-columns:1fr 1fr;gap:22px 10px}
-  .btn-row{flex-direction:column;align-items:stretch}
-  .btn{text-align:center}
-  footer{padding:28px 16px}
+.hero{padding:115px 16px 68px}
+.section{padding:68px 16px}
+.promise-grid{grid-template-columns:1fr 1fr;gap:22px 10px}
+.btn-row{flex-direction:column;align-items:stretch}
+.btn{text-align:center}
+footer{padding:28px 16px}
 }
+
+/* FIVE P'S HOMEPAGE ADDITION */
+.fiveps-home{padding:88px 24px;background:linear-gradient(90deg,#0b0b0b,#17130f,#0b0b0b);border-top:1px solid var(--l);border-bottom:1px solid var(--l)}
+.fiveps-home-inner{width:100%;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
+.fiveps-home-copy p{color:var(--m);font-size:.92rem;font-weight:300;margin-bottom:14px}
+.fiveps-home-tag{font-family:'Cormorant Garamond',serif;font-size:1.45rem!important;color:#fff!important;font-weight:600!important}
+.fiveps-home-cover{display:block;width:min(100%,370px);margin:0 auto;filter:drop-shadow(0 25px 35px rgba(0,0,0,.45))}
+.fiveps-badges{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 26px}
+.fiveps-badges span{border:1px solid rgba(201,168,118,.4);padding:8px 10px;color:var(--g);font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:900px){.fiveps-home-inner{grid-template-columns:1fr}}
+@media(max-width:600px){.fiveps-home{padding:68px 16px}.fiveps-home-cover{max-width:310px}}
+
 </style>
+<meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Prime Intelligence">
+<meta property="og:url" content="https://goprimeintelligence.com/">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Prime Intelligence","url":"https://goprimeintelligence.com/","founder":{"@type":"Person","name":"Juwan Davis"}},{"@type":"Book","name":"The Five P's Realtor Playbook","author":{"@type":"Person","name":"Juwan Davis"},"image":"https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ab656da1f3be2be1bab48cc.png","url":"https://goprimeintelligence.com/fiveps"}]}</script>
 </head>
 
 <body>
 
 <nav>
-  <a class="brand" href="https://goprimeintelligence.com/">Prime <span>Intelligence</span></a>
-  <button class="mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">Menu</button>
-  <ul class="nav-links">
-    <li><a href="https://goprimeintelligence.com/">Home</a></li>
-    <li><a href="https://goprimeintelligence.com/services">Services</a></li>
-    <li><a href="https://goprimeintelligence.com/sysb4scale">Systems Before Scale</a></li>
-    <li><a href="https://goprimeintelligence.com/aria">Aria</a></li>
-    <li><a href="https://goprimeintelligence.com/avatar">Avatar</a></li>
-    <li><a href="https://goprimeintelligence.com/pricing">Pricing</a></li>
+<a class="brand" href="https://goprimeintelligence.com/">Prime <span>Intelligence</span></a>
+<button class="mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">Menu</button>
+<ul class="nav-links">
+<li><a href="https://goprimeintelligence.com/">Home</a></li>
+<li><a href="https://goprimeintelligence.com/services">Services</a></li>
+<li><a href="https://goprimeintelligence.com/sysb4scale">Systems Before Scale</a></li>
+<li><a href="https://goprimeintelligence.com/aria">Aria</a></li>
+<li><a href="https://goprimeintelligence.com/avatar">Avatar</a></li>
+<li><a href="https://goprimeintelligence.com/pricing">Pricing</a></li>
+<li><a href="https://goprimeintelligence.com/fiveps">Five P's</a></li>
     <li><a class="nav-cta" href="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI">Start Here</a></li>
-  </ul>
+</ul>
 </nav>
 
 <header class="hero">
-  <div class="hero-grid">
-    <div>
-      <div class="eyebrow">CRM • Automation • AI • Business Systems</div>
-      <h1>Build the system <span>before you scale it.</span></h1>
-      <p class="hero-copy">Prime Intelligence helps small businesses capture leads, follow up faster, organize the customer journey, protect their reputation, and use AI where it actually makes sense.</p>
-      <div class="btn-row">
-        <a class="btn btn-gold" href="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI">Start With a Systems Audit</a>
-        <a class="btn btn-outline" href="tel:+15718372665">Call Aria • 571-837-2665</a>
-        <a class="btn btn-outline" href="https://goprimeintelligence.com/services">Explore Services</a>
-      </div>
-    </div>
+<div class="hero-grid">
+<div>
+<div class="eyebrow">CRM • Automation • AI • Business Systems</div>
+<h1>Build the system <span>before you scale it.</span></h1>
+<p class="hero-copy">Prime Intelligence helps small businesses capture leads, follow up faster, organize the customer journey, protect their reputation, and use AI where it actually makes sense.</p>
+<div class="btn-row">
+<a class="btn btn-gold" href="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI">Start With a Systems Audit</a>
+<a class="btn btn-outline" href="tel:+15718372665">Call Aria • 571-837-2665</a>
+<a class="btn btn-outline" href="https://goprimeintelligence.com/services">Explore Services</a>
+</div>
+</div>
 
-    <div class="promo-shell" id="prime-promo-video">
-      <video controls playsinline preload="metadata" src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a793ebc9994d35aa04060e7.mp4"></video>
-      <div class="video-note">Prime Intelligence promo • Missed-call text back</div>
-    </div>
-  </div>
+<div class="promo-shell" id="prime-promo-video">
+<video controls playsinline preload="metadata" src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a793ebc9994d35aa04060e7.mp4"></video>
+<div class="video-note">Prime Intelligence promo • Missed-call text back</div>
+</div>
+</div>
 </header>
 
 <section class="promise">
-  <div class="promise-grid">
-    <div class="promise-item"><strong>Capture</strong><span>Stop losing leads</span></div>
-    <div class="promise-item"><strong>Follow Up</strong><span>Respond consistently</span></div>
-    <div class="promise-item"><strong>Organize</strong><span>Use one system</span></div>
-    <div class="promise-item"><strong>Scale</strong><span>After the foundation</span></div>
-  </div>
+<div class="promise-grid">
+<div class="promise-item"><strong>Capture</strong><span>Stop losing leads</span></div>
+<div class="promise-item"><strong>Follow Up</strong><span>Respond consistently</span></div>
+<div class="promise-item"><strong>Organize</strong><span>Use one system</span></div>
+<div class="promise-item"><strong>Scale</strong><span>After the foundation</span></div>
+</div>
 </section>
 
 <section class="section">
-  <div class="inner center">
-    <div class="eyebrow">What We Build</div>
-    <h2 class="section-title">Simple systems that <span>actually get used.</span></h2>
-    <p class="section-copy">You do not need every tool. You need the right pieces connected in a way that makes the business easier to run.</p>
+<div class="inner center">
+<div class="eyebrow">What We Build</div>
+<h2 class="section-title">Simple systems that <span>actually get used.</span></h2>
+<p class="section-copy">You do not need every tool. You need the right pieces connected in a way that makes the business easier to run.</p>
 
-    <div class="card-grid">
-      <article class="card">
-        <div class="card-number">01</div>
-        <h3>CRM & Automation</h3>
-        <p>Lead capture, pipelines, follow-up, calendars, missed-call text back, review workflows, and the operational pieces that keep leads from falling through the cracks.</p>
-        <a href="https://goprimeintelligence.com/services">See CRM Services →</a>
-      </article>
+<div class="card-grid">
+<article class="card">
+<div class="card-number">01</div>
+<h3>CRM & Automation</h3>
+<p>Lead capture, pipelines, follow-up, calendars, missed-call text back, review workflows, and the operational pieces that keep leads from falling through the cracks.</p>
+<a href="https://goprimeintelligence.com/services">See CRM Services →</a>
+</article>
 
-      <article class="card">
-        <div class="card-number">02</div>
-        <h3>Aria AI Voice</h3>
-        <p>An AI voice receptionist built to answer common questions, route conversations, capture information, and help customers take the next step.</p>
-        <a href="https://goprimeintelligence.com/aria">Meet Aria →</a>
-      </article>
+<article class="card">
+<div class="card-number">02</div>
+<h3>Aria AI Voice</h3>
+<p>An AI voice receptionist built to answer common questions, route conversations, capture information, and help customers take the next step.</p>
+<a href="https://goprimeintelligence.com/aria">Meet Aria →</a>
+</article>
 
-      <article class="card">
-        <div class="card-number">03</div>
-        <h3>Revenue Websites</h3>
-        <p>Clean websites and landing pages built around a clear action: call, book, request information, submit a form, or start a conversation.</p>
-        <a href="https://goprimeintelligence.com/services#services">Website Services →</a>
-      </article>
+<article class="card">
+<div class="card-number">03</div>
+<h3>Revenue Websites</h3>
+<p>Clean websites and landing pages built around a clear action: call, book, request information, submit a form, or start a conversation.</p>
+<a href="https://goprimeintelligence.com/services#services">Website Services →</a>
+</article>
 
-      <article class="card">
-        <div class="card-number">04</div>
-        <h3>Reputation</h3>
-        <p>Make review requests part of the process instead of hoping someone remembers to leave one six months later.</p>
-        <a href="https://goprimeintelligence.com/services">Review Systems →</a>
-      </article>
+<article class="card">
+<div class="card-number">04</div>
+<h3>Reputation</h3>
+<p>Make review requests part of the process instead of hoping someone remembers to leave one six months later.</p>
+<a href="https://goprimeintelligence.com/services">Review Systems →</a>
+</article>
 
-      <article class="card">
-        <div class="card-number">05</div>
-        <h3>AI Avatar Content</h3>
-        <p>Use a digital version of yourself to create repeatable educational, promotional, and follow-up content without living in front of a camera.</p>
-        <a href="https://goprimeintelligence.com/avatar">Explore Avatar Services →</a>
-      </article>
+<article class="card">
+<div class="card-number">05</div>
+<h3>AI Avatar Content</h3>
+<p>Use a digital version of yourself to create repeatable educational, promotional, and follow-up content without living in front of a camera.</p>
+<a href="https://goprimeintelligence.com/avatar">Explore Avatar Services →</a>
+</article>
 
-      <article class="card">
-        <div class="card-number">06</div>
-        <h3>Systems Strategy</h3>
-        <p>Before adding more leads, ads, staff, or software, make sure the foundation underneath the business can handle growth.</p>
-        <a href="https://goprimeintelligence.com/sysb4scale">Systems Before Scale →</a>
-      </article>
-    </div>
-  </div>
+<article class="card">
+<div class="card-number">06</div>
+<h3>Systems Strategy</h3>
+<p>Before adding more leads, ads, staff, or software, make sure the foundation underneath the business can handle growth.</p>
+<a href="https://goprimeintelligence.com/sysb4scale">Systems Before Scale →</a>
+</article>
+</div>
+</div>
 </section>
 
 <section class="section alt">
-  <div class="inner systems-grid">
-    <div>
-      <div class="eyebrow">Systems Before Scale</div>
-      <h2 class="section-title">More traffic will not fix a <span>broken process.</span></h2>
-      <p class="section-copy" style="margin:0;">Lead Capture. Follow-Up. CRM. Automatic Scheduling. Reputation. Those five systems form the foundation before you chase more volume.</p>
-      <div class="quote">Do not generate more traffic until you know what you are doing with the traffic you already have.</div>
-      <div class="btn-row" style="margin-top:26px;">
-        <a class="btn btn-gold" href="https://goprimeintelligence.com/sysb4scale">Explore Systems Before Scale</a>
-      </div>
-    </div>
+<div class="inner systems-grid">
+<div>
+<div class="eyebrow">Systems Before Scale</div>
+<h2 class="section-title">More traffic will not fix a <span>broken process.</span></h2>
+<p class="section-copy" style="margin:0;">Lead Capture. Follow-Up. CRM. Automatic Scheduling. Reputation. Those five systems form the foundation before you chase more volume.</p>
+<div class="quote">Do not generate more traffic until you know what you are doing with the traffic you already have.</div>
+<div class="btn-row" style="margin-top:26px;">
+<a class="btn btn-gold" href="https://goprimeintelligence.com/sysb4scale">Explore Systems Before Scale</a>
+</div>
+</div>
 
-    <div class="feature-box">
-      <h3>Start with the next piece.</h3>
-      <p>One form. One workflow. One calendar. One pipeline. One problem at a time. The goal is not complexity. The goal is a business you can understand, maintain, and improve.</p>
-      <a class="btn btn-outline" href="https://api.primeview-media.com/widget/form/HxC6LgpNKZVdUJzfe1v2">Contact Prime Intelligence</a>
-    </div>
-  </div>
+<div class="feature-box">
+<h3>Start with the next piece.</h3>
+<p>One form. One workflow. One calendar. One pipeline. One problem at a time. The goal is not complexity. The goal is a business you can understand, maintain, and improve.</p>
+<a class="btn btn-outline" href="https://api.primeview-media.com/widget/form/HxC6LgpNKZVdUJzfe1v2">Contact Prime Intelligence</a>
+</div>
+</div>
 </section>
 
 <section class="section">
-  <div class="inner aria-grid">
-    <div class="feature-box">
-      <div class="eyebrow">AI Voice</div>
-      <h3>Meet Aria.</h3>
-      <p>Aria is Prime Intelligence's AI voice solution for businesses that want help handling calls, common questions, lead capture, and appointment routing without pretending AI should replace every human conversation.</p>
-      <div class="btn-row">
-        <a class="btn btn-gold" href="tel:+15718372665">Call Aria • 571-837-2665</a>
-        <a class="btn btn-outline" href="https://goprimeintelligence.com/aria">Meet Aria</a>
-        <a class="btn btn-outline" href="https://goprimeintelligence.com/pricing">View Pricing</a>
-      </div>
-    </div>
+<div class="inner aria-grid">
+<div class="feature-box">
+<div class="eyebrow">AI Voice</div>
+<h3>Meet Aria.</h3>
+<p>Aria is Prime Intelligence's AI voice solution for businesses that want help handling calls, common questions, lead capture, and appointment routing without pretending AI should replace every human conversation.</p>
+<div class="btn-row">
+<a class="btn btn-gold" href="tel:+15718372665">Call Aria • 571-837-2665</a>
+<a class="btn btn-outline" href="https://goprimeintelligence.com/aria">Meet Aria</a>
+<a class="btn btn-outline" href="https://goprimeintelligence.com/pricing">View Pricing</a>
+</div>
+</div>
 
-    <div>
-      <div class="eyebrow">Automation + Human Judgment</div>
-      <h2 class="section-title">Let the system handle repetition. <span>You handle the relationship.</span></h2>
-      <p class="section-copy" style="margin:0;">Automation should give you time back. AI should help with information, routing, and repeatable tasks. The human stays involved where judgment, trust, emotion, negotiation, or real decisions matter.</p>
-    </div>
-  </div>
+<div>
+<div class="eyebrow">Automation + Human Judgment</div>
+<h2 class="section-title">Let the system handle repetition. <span>You handle the relationship.</span></h2>
+<p class="section-copy" style="margin:0;">Automation should give you time back. AI should help with information, routing, and repeatable tasks. The human stays involved where judgment, trust, emotion, negotiation, or real decisions matter.</p>
+</div>
+</div>
 </section>
 
-<section class="ce-strip">
-  <div class="ce-grid">
-    <div>
-      <div class="eyebrow">Real Estate Education • Coming Soon</div>
-      <h2>The Five P's <span>Realtor Playbook</span></h2>
-      <p>A practical live course being developed for real estate professionals around branding, holistic media, marketing, CRM, follow-up, automation, AI, relationships, and repeatable business systems.</p>
-      <div class="status">West Virginia CE approval pending</div>
+<section class="fiveps-home" id="fiveps">
+  <div class="fiveps-home-inner">
+    <div class="fiveps-home-copy">
+      <div class="eyebrow">Book • Free Training • Continuing Education</div>
+      <h2 class="section-title">The Five P's <span>Realtor Playbook</span></h2>
+      <p class="fiveps-home-tag">Proper Preparation Prevents Poor Performance.</p>
+      <p>A practical framework for real estate professionals connecting branding, property media, marketing, systems, automation, and AI.</p>
+      <p>The book is available now in Kindle, paperback, and hardcover. A free Five P's community course is in development, and the continuing-education course has its own dedicated page.</p>
+      <div class="fiveps-badges">
+        <span>Book Available Now</span>
+        <span>Free Community Course In Development</span>
+        <span>WV CE Approval Pending</span>
+        <span>Virginia CE Submission Coming Soon</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="https://goprimeintelligence.com/fiveps">Explore The Five P's</a>
+        <a class="btn btn-outline" href="https://go.primeview-media.com/realtor-ce">CE Course</a>
+      </div>
     </div>
-    <div class="btn-row">
-      <a class="btn btn-gold" href="https://go.primeview-media.com/realtor-ce">CE Course — Coming Soon</a>
+    <div>
+      <a href="https://goprimeintelligence.com/fiveps" aria-label="Explore The Five P's Realtor Playbook">
+        <img class="fiveps-home-cover" src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ab656da1f3be2be1bab48cc.png" alt="The Five P's Realtor Playbook by Juwan Davis">
+      </a>
     </div>
   </div>
 </section>
 
 <section class="section alt" id="about">
-  <div class="inner about-grid">
-    <div class="about-photo">
-      <img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6aa8640103687f733ebc24ee.jpg" alt="Juwan Davis, founder of Prime Intelligence">
-    </div>
-    <div class="about-copy">
-      <div class="eyebrow">About Juwan Davis</div>
-      <h2 class="section-title">Built by an implementer, <span>not a theory guy.</span></h2>
-      <p>Juwan Davis is the founder of Prime Intelligence. Before building business systems, he spent more than two decades in contract manufacturing, logistics, supervision, process development, training, and project management.</p>
-      <p>Today, he combines that process-driven background with hands-on experience in real estate media, branding, websites, CRM systems, automation, AI voice, and practical business implementation.</p>
-      <p>The approach is simple: understand the fundamentals, build the process, test it, and make sure it actually works.</p>
-      <div class="quote"><strong>Proper Preparation Prevents Poor Performance.</strong></div>
-    </div>
-  </div>
+<div class="inner about-grid">
+<div class="about-photo">
+<img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6aa8640103687f733ebc24ee.jpg" alt="Juwan Davis, founder of Prime Intelligence">
+</div>
+<div class="about-copy">
+<div class="eyebrow">About Juwan Davis</div>
+<h2 class="section-title">Built by an implementer, <span>not a theory guy.</span></h2>
+<p>Juwan Davis is the founder of Prime Intelligence. Before building business systems, he spent more than two decades in contract manufacturing, logistics, supervision, process development, training, and project management.</p>
+<p>Today, he combines that process-driven background with hands-on experience in real estate media, branding, websites, CRM systems, automation, AI voice, and practical business implementation.</p>
+<p>The approach is simple: understand the fundamentals, build the process, test it, and make sure it actually works.</p>
+<div class="quote"><strong>Proper Preparation Prevents Poor Performance.</strong></div>
+</div>
+</div>
 </section>
 
 <section class="final-cta">
-  <div class="eyebrow">Ready to Clean Up the System?</div>
-  <h2>Build the foundation <span>before the next wave of leads.</span></h2>
-  <p>Start with a quick systems audit and identify where leads, follow-up, scheduling, reputation, or automation can be simplified.</p>
-  <div class="btn-row" style="justify-content:center;">
-    <a class="btn btn-gold" href="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI">Start the Audit</a>
-    <a class="btn btn-outline" href="https://goprimeintelligence.com/pricing">View Pricing</a>
-  </div>
+<div class="eyebrow">Ready to Clean Up the System?</div>
+<h2>Build the foundation <span>before the next wave of leads.</span></h2>
+<p>Start with a quick systems audit and identify where leads, follow-up, scheduling, reputation, or automation can be simplified.</p>
+<div class="btn-row" style="justify-content:center;">
+<a class="btn btn-gold" href="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI">Start the Audit</a>
+<a class="btn btn-outline" href="https://goprimeintelligence.com/pricing">View Pricing</a>
+</div>
 </section>
 
 <footer>
-  <div class="brand">Prime <span>Intelligence</span></div>
-  <ul class="footer-links">
-    <li><a href="https://goprimeintelligence.com/services">Services</a></li>
-    <li><a href="https://goprimeintelligence.com/sysb4scale">Systems Before Scale</a></li>
-    <li><a href="https://goprimeintelligence.com/aria">Aria</a></li>
-    <li><a href="https://goprimeintelligence.com/avatar">Avatar</a></li>
-    <li><a href="https://goprimeintelligence.com/pricing">Pricing</a></li>
-    <li><a href="https://goprimeintelligence.com/privacy-policy">Privacy</a></li>
-    <li><a href="https://goprimeintelligence.com/terms-of-service/">Terms</a></li>
-  </ul>
-  <div class="footer-copy">© Prime Intelligence</div>
+<div class="brand">Prime <span>Intelligence</span></div>
+<ul class="footer-links">
+<li><a href="https://goprimeintelligence.com/services">Services</a></li>
+<li><a href="https://goprimeintelligence.com/sysb4scale">Systems Before Scale</a></li>
+<li><a href="https://goprimeintelligence.com/aria">Aria</a></li>
+<li><a href="https://goprimeintelligence.com/avatar">Avatar</a></li>
+<li><a href="https://goprimeintelligence.com/pricing">Pricing</a></li>
+    <li><a href="https://goprimeintelligence.com/fiveps">Five P's</a></li>
+<li><a href="https://goprimeintelligence.com/privacy-policy">Privacy</a></li>
+<li><a href="https://goprimeintelligence.com/terms-of-service/">Terms</a></li>
+</ul>
+<div class="footer-copy">© Prime Intelligence</div>
 </footer>
 
 <script>
 document.querySelectorAll('.nav-links a').forEach(a=>{
-  a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open'));
+a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open'));
 });
 </script>
-
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a96bae0022028b919f5ab64"></script>
 </body>
 </html>
-<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a96bae0022028b919f5ab64"></script>
-</body></html>
