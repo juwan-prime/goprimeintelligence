@@ -214,22 +214,61 @@ img,video,iframe,svg{max-width:100%;height:auto}
 ]}
 ]}
 </script>
+
+<style id="prime-fiveps-unified">
+.prime-nav-logo{display:flex!important;align-items:center!important;flex:0 0 auto!important}
+.prime-nav-logo img{height:48px!important;width:auto!important;max-width:none!important}
+.nav-links{gap:20px!important}
+.nav-links a.active{color:var(--g)!important}
+.nav-links .newsletter-nav{border:1px solid rgba(201,168,118,.55)!important;color:var(--g)!important;padding:9px 13px!important}
+.nav-links .newsletter-nav:hover{border-color:var(--g)!important;color:#fff!important}
+.nav-links .nav-cta{padding:10px 14px!important}
+.pi-reveal{opacity:0;transform:translateY(34px);transition:opacity .78s ease,transform .78s cubic-bezier(.2,.7,.2,1)}
+.pi-reveal.pi-left{transform:translateX(-42px)}
+.pi-reveal.pi-right{transform:translateX(42px)}
+.pi-reveal.pi-visible{opacity:1;transform:none}
+.p-card,.story-card,.price-card,.eco,.status-box,.training-media,.bio-photo,.edition{
+ transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease
+}
+.p-card:hover,.story-card:hover,.price-card:hover,.eco:hover,.status-box:hover,.training-media:hover,.bio-photo:hover,.edition:hover{
+ transform:translateY(-5px);box-shadow:0 20px 55px rgba(0,0,0,.32);border-color:rgba(201,168,118,.48)
+}
+.btn{position:relative;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease}
+.btn:after{content:"";position:absolute;top:-55%;left:-75%;width:38%;height:210%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:rotate(18deg);transition:left .55s ease;pointer-events:none}
+.btn:hover{transform:translateY(-2px)}
+.btn:hover:after{left:135%}
+.hero .eyebrow,.hero h1,.hero p,.hero .btn-row{opacity:0;transform:translateY(24px);animation:fiveHeroIn .75s ease forwards}
+.hero h1{animation-delay:.1s}.hero p{animation-delay:.2s}.hero .btn-row{animation-delay:.3s}
+@keyframes fiveHeroIn{to{opacity:1;transform:none}}
+@media(max-width:980px){
+ .prime-nav-logo img{height:38px!important}
+ .nav-links .newsletter-nav,.nav-links .nav-cta{text-align:center!important;margin-top:7px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .pi-reveal,.hero .eyebrow,.hero h1,.hero p,.hero .btn-row{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+}
+</style>
+
 </head>
 <body>
 <nav>
 <div class="nav-in">
-<a class="brand" href="https://goprimeintelligence.com/">Prime <span>Intelligence</span></a>
-<button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">Menu</button>
+<a class="brand prime-nav-logo" href="https://goprimeintelligence.com/" aria-label="Prime Intelligence Home">
+<img src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a41cd79c492ddc24ce64faa.png" alt="Prime Intelligence">
+</a>
+<button class="menu" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
 <ul class="nav-links">
-<li><a href="https://goprimeintelligence.com/fiveps#framework">Five P's</a></li>
-<li><a href="https://goprimeintelligence.com/fiveps#book">Books</a></li>
-<li><a href="https://goprimeintelligence.com/fiveps#training">Free Course</a></li>
-<li><a href="https://goprimeintelligence.com/fiveps#ce">CE Course</a></li>
-<li><a href="https://goprimeintelligence.com/fiveps#pricing">CRM Plans</a></li>
-<li><a href="https://goprimeintelligence.com/fiveps#ecosystem">Resources</a></li>
-<li><a href="https://goprimeintelligence.com/fiveps#about">About</a></li>
-<li><a href="https://goprimeintelligence.com/">Prime Intelligence</a></li>
-<li><a class="nav-cta" href="https://goprimeintelligence.com/fiveps#book">Get the Book</a></li>
+<li><a href="https://goprimeintelligence.com/">Home</a></li>
+<li><a href="https://goprimeintelligence.com/services">Services</a></li>
+<li><a href="https://goprimeintelligence.com/websites">Websites</a></li>
+<li><a href="https://goprimeintelligence.com/sysb4scale">Systems Before Scale</a></li>
+<li><a href="https://goprimeintelligence.com/aria">Aria</a></li>
+<li><a href="https://goprimeintelligence.com/avatar">Avatar</a></li>
+<li><a href="https://goprimeintelligence.com/pricing">Pricing</a></li>
+<li><a href="https://goprimeintelligence.com/vip">Funding</a></li>
+<li><a class="active" href="https://goprimeintelligence.com/fiveps">Five P's</a></li>
+<li><a class="newsletter-nav" href="https://goprimeintelligence.com/newsletter">Newsletter</a></li>
+<li><a class="nav-cta" href="https://goprimeintelligence.com/growwelcome">Start Here</a></li>
 </ul>
 </div>
 </nav>
@@ -479,9 +518,41 @@ img,video,iframe,svg{max-width:100%;height:auto}
 <a class="brand" href="https://goprimeintelligence.com/">Prime <span>Intelligence</span></a>
 <div class="foot-links"><a href="https://goprimeintelligence.com/fiveps">Five P's</a><a href="https://go.primeview-media.com/realtor-ce">CE Course</a><a href="https://primeview-media.com/">Prime View Media</a><a href="https://juwandavisphotography.com/">Juwan Davis Photography</a><a href="https://goprimeintelligence.com/">Prime Intelligence</a><a href="https://goprimeintelligence.com/5psagreement">Service Agreement</a><a href="https://goprimeintelligence.com/privacy-policy">Privacy</a><a href="https://goprimeintelligence.com/terms-of-service/">Terms</a></div>
 </div></footer>
-<script>
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
-</script>
+
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https\\://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a96bae0022028b919f5ab64"></script>
+
+<script id="prime-fiveps-motion">
+document.addEventListener("DOMContentLoaded",function(){
+ const targets=[...document.querySelectorAll(
+   ".story-grid > *,.head,.p-card,.media-band .copy,.book-grid > *,.training-grid > *,.ce-grid > *,.price-card,#agreement-callout .story-card,.eco,.bio-grid > *,.faq details,.final .head,.final .btn-row"
+ )];
+ targets.forEach(function(el,i){
+   el.classList.add("pi-reveal");
+   if(el.matches(".story-grid > :first-child,.book-grid > :first-child,.training-grid > :first-child,.ce-grid > :first-child,.bio-grid > :first-child")) el.classList.add("pi-left");
+   if(el.matches(".story-grid > :last-child,.book-grid > :last-child,.training-grid > :last-child,.ce-grid > :last-child,.bio-grid > :last-child")) el.classList.add("pi-right");
+ });
+ if("IntersectionObserver" in window){
+   const io=new IntersectionObserver(function(entries){
+     entries.forEach(function(e){
+       if(e.isIntersecting){e.target.classList.add("pi-visible");io.unobserve(e.target)}
+     });
+   },{threshold:.12,rootMargin:"0px 0px -45px 0px"});
+   targets.forEach(el=>io.observe(el));
+ }else targets.forEach(el=>el.classList.add("pi-visible"));
+
+ const toggle=document.querySelector(".menu");
+ const menu=document.querySelector(".nav-links");
+ if(toggle&&menu){
+   toggle.addEventListener("click",function(){
+     const open=menu.classList.toggle("open");
+     toggle.setAttribute("aria-expanded",open?"true":"false");
+   });
+   menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",function(){
+     menu.classList.remove("open");toggle.setAttribute("aria-expanded","false");
+   }));
+ }
+});
+</script>
+
 </body>
 </html>
