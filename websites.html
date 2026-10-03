@@ -1,5 +1,4 @@
-
-<!doctype html>
+<br><!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -104,23 +103,51 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
  ]
 }
 </script>
+
+<style id="prime-master-motion">
+.master-logo{display:flex;align-items:center}
+.master-logo img{height:48px;width:auto;display:block}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.reveal.from-left{transform:translateX(-42px)}
+.reveal.from-right{transform:translateX(42px)}
+.reveal.in-view{opacity:1;transform:none}
+.card,.compare-item,.option,.faq-item{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.card:hover,.compare-item:hover,.option:hover,.faq-item:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(0,0,0,.28)}
+.btn{position:relative;overflow:hidden}
+.btn:after{content:"";position:absolute;top:-50%;left:-70%;width:38%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:rotate(18deg);transition:left .55s ease}
+.btn:hover:after{left:135%}
+.hero .eyebrow,.hero h1,.hero-copy,.hero-actions,.hero .micro{opacity:0;transform:translateY(22px);animation:primeHeroIn .72s ease forwards}
+.hero h1{animation-delay:.10s}.hero-copy{animation-delay:.20s}.hero-actions{animation-delay:.30s}.hero .micro{animation-delay:.40s}
+@keyframes primeHeroIn{to{opacity:1;transform:none}}
+@media(max-width:600px){.master-logo img{height:38px}}
+@media(prefers-reduced-motion:reduce){
+  .reveal,.hero .eyebrow,.hero h1,.hero-copy,.hero-actions,.hero .micro{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+}
+</style>
+
 </head>
 <body>
 <nav>
-<div class="nav-inner">
-<a class="logo" href="https://goprimeintelligence.com/">PRIME INTELLIGENCE</a>
-<button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">MENU</button>
-<ul class="nav-links">
-<li><a href="https://goprimeintelligence.com/">Home</a></li>
-<li><a href="https://goprimeintelligence.com/services">Services</a></li>
-<li><a class="active" href="https://goprimeintelligence.com/websites">Websites</a></li>
-<li><a href="https://goprimeintelligence.com/pricing">Pricing</a></li>
-<li><a href="https://goprimeintelligence.com/fiveps">Five P's</a></li>
-<li><a class="nav-cta" href="#website-options">View Options</a></li>
-</ul>
-</div>
+  <div class="nav-inner">
+    <a class="logo master-logo" href="https://goprimeintelligence.com/" aria-label="Prime Intelligence Home">
+      <img src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a41f67989d9cd8dc224ba24.png" alt="Prime Intelligence">
+    </a>
+    <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">MENU</button>
+    <ul class="nav-links">
+      <li><a href="https://goprimeintelligence.com/">Home</a></li>
+      <li><a href="https://goprimeintelligence.com/services">Services</a></li>
+      <li><a class="active" href="https://goprimeintelligence.com/websites">Websites</a></li>
+      <li><a href="https://goprimeintelligence.com/sysb4scale">Systems Before Scale</a></li>
+      <li><a href="https://goprimeintelligence.com/aria">Aria</a></li>
+      <li><a href="https://goprimeintelligence.com/avatar">Avatar</a></li>
+      <li><a href="https://goprimeintelligence.com/pricing">Pricing</a></li>
+      <li><a href="https://goprimeintelligence.com/vip">Funding</a></li>
+      <li><a href="https://goprimeintelligence.com/fiveps">Five P's</a></li>
+      <li><a class="nav-cta" href="https://goprimeintelligence.com/growwelcome">Start Here</a></li>
+    </ul>
+  </div>
 </nav>
-
+<br>
 <header class="hero">
 <div class="container">
 <div class="hero-inner">
@@ -128,14 +155,14 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
 <h1>Your Website Should Do More Than <em>Exist.</em></h1>
 <p class="hero-copy">It should make your business look professional, explain what you do, give people a clear next step and turn attention into leads. Start with a simple Revenue Website or build a larger custom website around your business.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="#website-options">See Website Options</a>
+<a class="btn btn-primary" href="https://goprimeintelligence.com/websites#website-options">See Website Options</a>
 <a class="btn btn-secondary" href="https://goprimeintelligence.com/pricing">View All Pricing</a>
 </div>
 <p class="micro">Two clear ways to get started. No bloated package just because you need a website.</p>
 </div>
 </div>
 </header>
-
+<br>
 <section id="website-options">
 <div class="container">
 <div class="section-head center">
@@ -152,23 +179,23 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
 <p>A focused one-page website for businesses that need to look legitimate online, explain their services and capture leads without paying for a larger custom build.</p>
 <ul class="features">
 <li>Custom one-page business website</li>
-<li>Responsive desktop, tablet &amp; mobile design</li>
-<li>Business information &amp; services</li>
-<li>About section &amp; calls-to-action</li>
+<li>Responsive desktop, tablet & mobile design</li>
+<li>Business information & services</li>
+<li>About section & calls-to-action</li>
 <li>Contact / lead form</li>
 <li>Simple CRM for captured leads</li>
 <li>Lead notifications</li>
 <li>Domain connection</li>
-<li>SSL &amp; managed hosting</li>
-<li>Foundational SEO &amp; AEO setup</li>
-<li>Technical maintenance &amp; ticket support</li>
+<li>SSL & managed hosting</li>
+<li>Foundational SEO & AEO setup</li>
+<li>Technical maintenance & ticket support</li>
 <li class="no">No automated follow-up</li>
 <li class="no">No SMS or email automation</li>
 <li class="no">No AI Voice or AI agents</li>
 </ul>
 <a class="btn btn-primary" style="width:100%;text-align:center" href="https://api.primeview-media.com/payment-link/6a4207999b12592b36824feb">Start My Revenue Website</a>
 </article>
-
+<br>
 <article class="card">
 <p class="eyebrow">Built Around Your Business</p>
 <h3>Custom Business Website</h3>
@@ -178,22 +205,22 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
 <ul class="features">
 <li>Custom multi-page website</li>
 <li>Projects can include up to 20 pages depending on scope</li>
-<li>Responsive desktop, tablet &amp; mobile development</li>
+<li>Responsive desktop, tablet & mobile development</li>
 <li>Foundational SEO</li>
 <li>AEO / AI-search optimization foundations</li>
-<li>Lead capture &amp; calls-to-action</li>
+<li>Lead capture & calls-to-action</li>
 <li>Forms and applicable integrations</li>
 <li>Domain connection</li>
 <li>Launch configuration</li>
 <li>Managed Website Care available after build/payment term</li>
 <li>Major functionality scoped before development</li>
 </ul>
-<a class="btn btn-secondary" style="width:100%;text-align:center" href="#custom-pricing">See Custom Website Pricing</a>
+<a class="btn btn-secondary" style="width:100%;text-align:center" href="https://goprimeintelligence.com/websites#custom-pricing">See Custom Website Pricing</a>
 </article>
 </div>
 </div>
 </section>
-
+<br>
 <section class="compare">
 <div class="container">
 <div class="section-head">
@@ -208,7 +235,7 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
 </div>
 </div>
 </section>
-
+<br>
 <section class="custom" id="custom-pricing">
 <div class="container">
 <div class="custom-grid">
@@ -222,12 +249,12 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
 </div>
 <div class="options">
 <div class="option featured">
-<p class="eyebrow">Pay in Full &amp; Save $600</p>
+<p class="eyebrow">Pay in Full & Save $600</p>
 <h3>Custom Website — Pay in Full</h3>
 <div class="price">$3,500</div>
 <div class="price-sub">$3,000 discounted build + $500 setup · due today</div>
 <p>Same custom website scope, with a $600 discount on the standard $3,600 website build when you pay the build cost upfront.</p>
-<a class="btn btn-primary" style="width:100%;text-align:center" href="https://api.primeview-media.com/payment-link/6a86a135f9c8c807930b918f">Pay in Full &amp; Save</a>
+<a class="btn btn-primary" style="width:100%;text-align:center" href="https://api.primeview-media.com/payment-link/6a86a135f9c8c807930b918f">Pay in Full & Save</a>
 </div>
 <div class="option">
 <p class="eyebrow">About $10/Day</p>
@@ -241,7 +268,7 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
 </div>
 </div>
 </section>
-
+<br>
 <section class="faq">
 <div class="container">
 <div class="section-head center">
@@ -258,7 +285,7 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
 </div>
 </div>
 </section>
-
+<br>
 <section class="final">
 <div class="container">
 <p class="eyebrow">Build the Right Website</p>
@@ -266,17 +293,40 @@ footer{border-top:1px solid var(--line);padding:35px 24px;color:rgba(255,255,255
 <p>If you need a clean one-page presence and a place to capture leads, start with the Revenue Website. If your business needs a larger digital presence, choose a custom build.</p>
 <div class="actions">
 <a class="btn btn-primary" href="https://api.primeview-media.com/payment-link/6a4207999b12592b36824feb">Revenue Website — $150/Mo</a>
-<a class="btn btn-secondary" href="#custom-pricing">Custom Website Options</a>
+<a class="btn btn-secondary" href="https://goprimeintelligence.com/websites#custom-pricing">Custom Website Options</a>
 </div>
 <p class="terms">Purchases are subject to the <a href="https://goprimeintelligence.com/serviceagreement">Prime Intelligence Service Agreement</a>. Third-party or usage-based charges may apply where applicable.</p>
 </div>
 </section>
-
+<br>
 <footer>
 <div class="footer-inner">
 <div>© 2026 Prime Intelligence. All rights reserved.</div>
 <div class="footer-links"><a href="https://goprimeintelligence.com/">Home</a><a href="https://goprimeintelligence.com/services">Services</a><a href="https://goprimeintelligence.com/pricing">Pricing</a><a href="https://goprimeintelligence.com/serviceagreement">Service Agreement</a></div>
 </div>
 </footer>
+
+<script id="prime-master-motion-js">
+document.addEventListener("DOMContentLoaded",function(){
+  const targets=document.querySelectorAll(".section-head,.card,.compare-item,.custom-copy,.option,.faq-item,.final .container");
+  targets.forEach((el,i)=>{
+    el.classList.add("reveal");
+    if(el.classList.contains("card")||el.classList.contains("option")){
+      el.classList.add(i%2===0?"from-left":"from-right");
+    }
+  });
+  if("IntersectionObserver" in window){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){entry.target.classList.add("in-view");io.unobserve(entry.target);}
+      });
+    },{threshold:.12,rootMargin:"0px 0px -45px 0px"});
+    targets.forEach(el=>io.observe(el));
+  } else {
+    targets.forEach(el=>el.classList.add("in-view"));
+  }
+});
+</script>
+
 </body>
 </html>
