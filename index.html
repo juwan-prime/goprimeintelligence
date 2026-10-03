@@ -1,15 +1,14 @@
-
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prime Intelligence \\| CRM, Automation & AI Systems for Small Business</title>
+<title>Prime Intelligence | CRM, Automation & AI Systems for Small Business</title>
 <meta name="description" content="Prime Intelligence helps small businesses build websites, CRM systems, automation and AI, strengthen reputation, and connect with business funding and credit resources when capital becomes part of the growth plan.">
 <link rel="canonical" href="https://goprimeintelligence.com/">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
+\*{box-sizing:border-box;margin:0;padding:0}
 :root{
 --b:#000;
 --p:#0d0d0d;
@@ -228,7 +227,7 @@ background:#050505;border-bottom:1px solid var(--l)
 .btn{text-align:center}
 footer{padding:28px 16px}
 }
-/* FIVE P'S HOMEPAGE ADDITION */
+/\* FIVE P'S HOMEPAGE ADDITION \*/
 .fiveps-home{padding:88px 24px;background:linear-gradient(90deg,#0b0b0b,#17130f,#0b0b0b);border-top:1px solid var(--l);border-bottom:1px solid var(--l)}
 .fiveps-home-inner{width:100%;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center}
 .fiveps-home-copy p{color:var(--m);font-size:.92rem;font-weight:300;margin-bottom:14px}
@@ -238,8 +237,8 @@ footer{padding:28px 16px}
 .fiveps-badges span{border:1px solid rgba(201,168,118,.4);padding:8px 10px;color:var(--g);font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:900px){.fiveps-home-inner{grid-template-columns:1fr}}
 @media(max-width:600px){.fiveps-home{padding:68px 16px}.fiveps-home-cover{max-width:310px}}
-
-/* BUSINESS FUNDING RESOURCE */
+<br>
+/\* BUSINESS FUNDING RESOURCE \*/
 .funding-home{padding:88px 24px;background:linear-gradient(135deg,#070707 0%,#14110d 50%,#070707 100%);border-top:1px solid var(--l);border-bottom:1px solid var(--l)}
 .funding-home-inner{width:100%;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
 .funding-home-copy p{color:var(--m);font-size:.92rem;font-weight:300;margin-bottom:14px}
@@ -254,7 +253,50 @@ footer{padding:28px 16px}
 .funding-disclosure{font-size:.68rem!important;color:rgba(255,255,255,.4)!important;margin-top:18px!important}
 @media(max-width:900px){.funding-home-inner{grid-template-columns:1fr}}
 @media(max-width:600px){.funding-home{padding:68px 16px}.funding-points{grid-template-columns:1fr}}
+<br>
+\n/* PRIME INTELLIGENCE MOTION SYSTEM — 2026 */
+:root{--motion-ease:cubic-bezier(.22,.8,.22,1)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at var(--mx,70%) var(--my,20%),rgba(201,168,118,.075),transparent 24%);transition:background .2s linear}
+nav{transition:background .35s ease,border-color .35s ease,box-shadow .35s ease}
+nav.nav-scrolled{background:rgba(0,0,0,.96);box-shadow:0 12px 36px rgba(0,0,0,.28);border-bottom-color:rgba(201,168,118,.28)}
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero:after{content:none!important;display:none!important}
 
+
+.hero-grid>div:first-child>*{opacity:0;transform:translateY(26px);animation:piHeroIn .9s var(--motion-ease) forwards}
+.hero-grid>div:first-child>.eyebrow{animation-delay:.08s}.hero-grid>div:first-child>h1{animation-delay:.18s}.hero-grid>div:first-child>.hero-copy{animation-delay:.3s}.hero-grid>div:first-child>.btn-row{animation-delay:.42s}
+.hero .promo-shell{opacity:0;transform:translateX(34px) scale(.97);animation:piHeroMedia 1.05s .3s var(--motion-ease) forwards;transition:transform .35s var(--motion-ease),box-shadow .35s ease,border-color .35s ease}
+.hero .promo-shell:hover{transform:translateY(-6px);box-shadow:0 34px 90px rgba(0,0,0,.55),0 0 40px rgba(201,168,118,.08);border-color:rgba(201,168,118,.42)}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--motion-ease),transform .8s var(--motion-ease)}
+.reveal.reveal-left{transform:translateX(-38px)}.reveal.reveal-right{transform:translateX(38px)}
+.reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+.stagger>*{opacity:0;transform:translateY(24px);transition:opacity .7s var(--motion-ease),transform .7s var(--motion-ease)}
+.stagger.is-visible>*{opacity:1;transform:none}.stagger.is-visible>*:nth-child(2){transition-delay:.08s}.stagger.is-visible>*:nth-child(3){transition-delay:.16s}.stagger.is-visible>*:nth-child(4){transition-delay:.24s}.stagger.is-visible>*:nth-child(5){transition-delay:.32s}.stagger.is-visible>*:nth-child(6){transition-delay:.40s}
+.card,.feature-box,.funding-point,.funding-panel,.about-photo{transition:transform .32s var(--motion-ease),border-color .32s ease,background .32s ease,box-shadow .32s ease}
+.card:hover,.feature-box:hover,.funding-panel:hover{transform:translateY(-7px);border-color:rgba(201,168,118,.45);box-shadow:0 22px 60px rgba(0,0,0,.3)}
+.funding-point:hover{transform:translateY(-3px);border-color:rgba(201,168,118,.55);background:rgba(201,168,118,.06)}
+.btn{position:relative;overflow:hidden;transform:translateZ(0);transition:transform .22s ease,background .22s ease,border-color .22s ease,color .22s ease,box-shadow .22s ease}
+.btn:after{content:"";position:absolute;inset:0;transform:translateX(-130%) skewX(-18deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transition:transform .55s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.25)}.btn:hover:after{transform:translateX(130%) skewX(-18deg)}
+.eyebrow{position:relative;display:inline-block}.eyebrow:after{content:"";display:block;width:0;height:1px;background:var(--g);margin-top:7px;transition:width .8s var(--motion-ease)}.is-visible .eyebrow:after,.eyebrow.is-visible:after{width:46px}
+.fiveps-home-cover{transition:transform .18s linear,filter .35s ease;will-change:transform}.fiveps-home-cover:hover{filter:drop-shadow(0 34px 45px rgba(0,0,0,.58))}
+.about-photo img{transition:transform .7s var(--motion-ease)}.about-photo{overflow:hidden}.about-photo:hover img{transform:scale(1.025)}
+@keyframes piHeroIn{to{opacity:1;transform:none}}@keyframes piHeroMedia{to{opacity:1;transform:none}}@keyframes piOrbit{to{transform:rotate(360deg)}}@keyframes piOrbitReverse{to{transform:rotate(-360deg)}}
+@media(max-width:900px){.reveal.reveal-left,.reveal.reveal-right{transform:translateY(28px)}.reveal.is-visible{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero:before,.hero:after{animation:none}.hero-grid>div:first-child>*,.hero .promo-shell,.reveal,.stagger>*,.fiveps-home-cover{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}.btn:after{display:none}}
+
+
+/* HERO VIDEO BACKGROUND */
+.hero{position:relative;overflow:hidden;background:#000;}
+.hero-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.58;pointer-events:none;}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.56) 48%,rgba(0,0,0,.42) 100%),linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.48));pointer-events:none;}
+.hero-grid{position:relative;z-index:2;grid-template-columns:minmax(0,760px) 1fr;}
+.hero-brand-watermark{position:absolute;right:clamp(28px,6vw,100px);top:50%;transform:translateY(-50%);z-index:2;width:clamp(250px,30vw,500px);max-height:58%;object-fit:contain;opacity:1;filter:brightness(1.18) contrast(1.08) drop-shadow(0 14px 35px rgba(0,0,0,.65)) drop-shadow(0 0 22px rgba(201,168,118,.22));pointer-events:none;}
+@media(max-width:900px){.hero-brand-watermark{right:50%;top:auto;bottom:34px;transform:translateX(50%);width:min(58vw,340px);opacity:1;}}
+@media(max-width:600px){.hero-brand-watermark{width:min(68vw,300px);bottom:24px;opacity:1;}}
+.hero .promo-shell{display:none;}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-bg-video{opacity:.52}.hero::before{background:linear-gradient(180deg,rgba(0,0,0,.48),rgba(0,0,0,.68));}}
+@media(prefers-reduced-motion:reduce){.hero-bg-video{display:none}.hero{background:radial-gradient(circle at 68% 40%,rgba(201,168,118,.12),transparent 30%),linear-gradient(180deg,#050505 0%,#000 100%);}}
 </style>
 <meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1">
 <meta property="og:type" content="website">
@@ -282,6 +324,8 @@ footer{padding:28px 16px}
 </div>
 </nav>
 <header class="hero">
+<video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1" src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a793ebc9994d35aa04060e7.mp4"></video>
+<img class="hero-brand-watermark" src="https://assets.cdn.filesafe.space/v4CmwXtqWpSvpqyvM2lB/media/6a41cd79c492ddc24ce64faa.png" alt="" aria-hidden="true">
 <div class="hero-grid">
 <div>
 <div class="eyebrow">Websites • CRM • Automation • AI • Business Systems</div>
@@ -422,7 +466,7 @@ footer{padding:28px 16px}
 </div>
 </div>
 </section>
-
+<br>
 <section class="section">
 <div class="inner aria-grid">
 <div class="feature-box">
@@ -515,5 +559,24 @@ a.addEventListener('click',()=>document.querySelector('.nav-links').classList.re
 });
 </script>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a96bae0022028b919f5ab64"></script>
-</body>
+\n<script>
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nav=document.querySelector('nav');
+  const updateNav=()=>nav&&nav.classList.toggle('nav-scrolled',window.scrollY>24);
+  updateNav(); window.addEventListener('scroll',updateNav,{passive:true});
+  const selectors=['.section > .inner','.funding-home-inner','.fiveps-home-inner','.final-cta','.promise-grid'];
+  document.querySelectorAll(selectors.join(',')).forEach((el,i)=>{el.classList.add('reveal'); if(i%2) el.classList.add('reveal-left');});
+  document.querySelectorAll('.card-grid,.promise-grid,.funding-points,.fiveps-badges').forEach(el=>el.classList.add('stagger'));
+  document.querySelectorAll('.systems-grid,.aria-grid,.about-grid').forEach(grid=>{[...grid.children].forEach((el,i)=>{el.classList.add('reveal',i%2?'reveal-right':'reveal-left')})});
+  if(reduce){document.querySelectorAll('.reveal,.stagger').forEach(el=>el.classList.add('is-visible'));return;}
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.13,rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+  const cover=document.querySelector('.fiveps-home-cover');
+  let ticking=false;
+  const motion=()=>{if(cover){const r=cover.getBoundingClientRect();const center=r.top+r.height/2-window.innerHeight/2;const y=Math.max(-12,Math.min(12,-center*.025));cover.style.transform=`translateY(${y}px) rotate(${y*.08}deg)`;} ticking=false;};
+  window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(motion);ticking=true}},{passive:true}); motion();
+  window.addEventListener('pointermove',e=>{document.documentElement.style.setProperty('--mx',(e.clientX/window.innerWidth*100)+'%');document.documentElement.style.setProperty('--my',(e.clientY/window.innerHeight*100)+'%')},{passive:true});
+})();
+</script>\n</body>
 </html>
