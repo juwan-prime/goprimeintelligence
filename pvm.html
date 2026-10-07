@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prime View Media | Real Estate & Commercial Media</title>
+<meta name="description" content="Professional real estate photography, video, drone, floor plans, 360 tours and commercial media serving West Virginia, Northern Virginia and Maryland.">
+<link rel="canonical" href="https://primeview-media.com/">
+<style>
+:root{--black:#050505;--panel:#0d0d0d;--gold:#d4af37;--gold2:#b88a1d;--white:#fff;--muted:#bdbdbd;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img,video{display:block;max-width:100%}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(5,5,5,.96);border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px)}
+.nav{min-height:88px;display:flex;align-items:center;gap:28px}.brand img{width:185px}.links{margin-left:auto;display:flex;align-items:center;gap:24px;font-size:13px;font-weight:800;letter-spacing:.08em}.links a:not(.book):hover{color:var(--gold)}.book,.btn.primary{background:var(--gold);color:#080808!important;border-color:var(--gold)!important}.book{padding:17px 22px}
+.hero{position:relative;min-height:680px;display:flex;align-items:flex-end;overflow:hidden;background:#000}.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%;transform:none}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.28) 65%,rgba(0,0,0,.1)),linear-gradient(0deg,rgba(0,0,0,.85),transparent 55%)}
+.hero-content{position:relative;z-index:2;padding:150px 0 78px;max-width:850px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:.22em;font-size:12px;text-transform:uppercase}h1{font-size:clamp(48px,7vw,94px);line-height:.94;margin:20px 0 24px;letter-spacing:-.055em}.lead{font-size:clamp(18px,2vw,23px);line-height:1.55;color:#e7e7e7;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 23px;border:1px solid rgba(255,255,255,.38);font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.logo-band{background:#fff;color:#111;padding:27px 0;overflow:hidden}.logo-row{display:flex;align-items:center;gap:70px;width:max-content;animation:marquee 28s linear infinite}.logo-row img{height:58px;width:160px;object-fit:contain;filter:none;opacity:1}@keyframes marquee{to{transform:translateX(-50%)}}
+section{padding:100px 0}.section-head{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:end;margin-bottom:42px}h2{font-size:clamp(38px,5vw,66px);line-height:1;margin:10px 0;letter-spacing:-.04em}.muted{color:var(--muted);line-height:1.7}.gold{color:var(--gold)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{min-height:390px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.12)}.service img,.service video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}.service:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.92),rgba(0,0,0,.06) 70%)}
+.service-copy{position:absolute;z-index:2;left:25px;right:25px;bottom:24px}.service h3{font-size:29px;margin:8px 0}.service p{color:#ddd;line-height:1.5;margin:0 0 12px}.service .explore{color:var(--gold);font-weight:900;font-size:12px;letter-spacing:.1em}.service:hover img,.service:hover video{transform:scale(1.025)}
+.work{background:#0a0a0a}.work-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:14px}.work-grid img{width:100%;height:100%;min-height:330px;object-fit:cover}.work-side{display:grid;gap:14px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.about img{width:100%;max-height:650px;object-fit:cover;object-position:center top}.about p{font-size:18px;line-height:1.75;color:#d3d3d3}
+.custom{border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)}.custom-grid,.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{padding:40px;background:#101010;border:1px solid rgba(255,255,255,.1)}.card h3{font-size:29px;margin:10px 0}.card p{color:#c7c7c7;line-height:1.7}
+.final{text-align:center;background:linear-gradient(135deg,#0c0c0c,#151000)}.final .actions{justify-content:center}
+footer{padding:55px 0 30px;border-top:1px solid rgba(255,255,255,.1)}.footer-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:45px}footer img{width:180px}footer h4{color:var(--gold);font-size:12px;letter-spacing:.14em;text-transform:uppercase}footer a{display:block;color:#bbb;margin:11px 0;font-size:14px}footer a:hover{color:#fff}
+.reveal{opacity:0;transform:translateY(22px);transition:.75s ease}.reveal.in{opacity:1;transform:none}
+.mobile-toggle{display:none}
+@media(max-width:980px){.links{display:none}.mobile-toggle{display:block;margin-left:auto;color:#fff;background:none;border:1px solid #444;padding:12px}.services{grid-template-columns:repeat(2,1fr)}.section-head,.about,.footer-grid{grid-template-columns:1fr}.work-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.wrap{width:min(100% - 30px,var(--max))}.hero{min-height:620px}.hero video{object-position:center center}.hero-content{padding:120px 0 55px}.services,.custom-grid,.resource-grid{grid-template-columns:1fr}section{padding:72px 0}h1{font-size:52px}.logo-row{gap:40px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+html,body{background:#050505!important;}
+body{overflow-x:hidden!important;}
+.pvm-page{width:100vw!important;max-width:none!important;margin-left:calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;background:#050505!important;overflow:hidden!important;}
+.pvm-page main,.pvm-page section,.pvm-page footer{background-color:#050505;}
+.pvm-page .logo-band{background:#fff!important;}
+.pvm-page .work{background:#0a0a0a!important;}
+.pvm-page .final{background:linear-gradient(135deg,#0c0c0c,#151000)!important;}
+.logo-band{padding:30px 0!important;}
+.logo-viewport{overflow:hidden;width:100%;}
+.logo-row{display:flex;align-items:center;gap:58px;width:max-content;animation:marquee 34s linear infinite;}
+.logo-item{width:175px;height:86px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.logo-item img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;filter:none!important;opacity:1!important;}
+.reviews-section{background:#050505!important;padding:48px 0 38px!important;}
+.reviews-section .section-head{display:block!important;margin-bottom:18px!important;}
+.reviews-section h2{font-size:clamp(30px,3.5vw,46px)!important;margin:7px 0 0!important;}
+.reviews-section .section-head>p{display:none!important;}
+.review-frame{margin-top:0!important;overflow:visible!important;border:0!important;background:#050505!important;padding:0!important;}
+.review-frame .lc_reviews_widget{display:block!important;width:100%!important;min-width:100%!important;border:0!important;}
+@media(max-width:620px){.reviews-section{padding:38px 0 28px!important}}
+@media(max-width:620px){.logo-item{width:135px;height:70px}.logo-row{gap:34px}.reviews-section{padding:72px 0}}
+
+
+.brand-ecosystem{background:#050505!important;padding:72px 0!important;border-top:1px solid rgba(255,255,255,.08);}
+.brand-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px;}
+.brand-link{display:block;padding:30px;border:1px solid rgba(255,255,255,.12);background:#0b0b0b;text-decoration:none;transition:.25s ease;}
+.brand-link:hover{border-color:#d9ad2b;transform:translateY(-2px);}
+.brand-link h3{color:#fff;margin:8px 0 10px;font-size:clamp(24px,3vw,34px);}
+.brand-link p{color:#aaa;margin:0 0 20px;line-height:1.65;}
+@media(max-width:760px){.brand-links{grid-template-columns:1fr}.brand-ecosystem{padding:55px 0!important}}
+
+
+/* V15 booking explainer + persistent booking CTA */
+.booking-explainer{background:#050505!important;padding:72px 0!important;border-top:1px solid rgba(255,255,255,.08);}
+.booking-explainer-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:42px;align-items:center;}
+.booking-video{overflow:hidden;background:#000;border:1px solid rgba(255,255,255,.12);}
+.booking-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#000;}
+.booking-steps{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 25px;}
+.booking-steps span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#ddd;border:1px solid rgba(255,255,255,.14);padding:9px 11px;background:#0b0b0b;}
+.sticky-book{position:fixed;right:22px;top:22px;bottom:auto;z-index:9999;display:inline-flex;align-items:center;justify-content:center;background:#d9ad2b;color:#050505!important;text-decoration:none;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:15px 20px;border:1px solid #e9c95a;box-shadow:0 12px 32px rgba(0,0,0,.38);transition:.2s ease;}
+.sticky-book:hover{transform:translateY(-2px);}
+.powered-credit{text-align:center;font-size:12px;color:#777;padding:12px 18px 18px;background:#050505;}
+.powered-credit a{color:#d9ad2b;text-decoration:none;font-weight:700;}
+.powered-credit a:hover{text-decoration:underline;}
+@media(max-width:800px){
+  .booking-explainer-grid{grid-template-columns:1fr;gap:26px;}
+  .sticky-book{left:auto;right:12px;top:12px;bottom:auto;padding:12px 15px;font-size:12px;}
+  body{padding-bottom:0;}
+}
+
+</style>
+</head>
+<body><div class="pvm-page">
+<header><div class="wrap nav"><a class="brand" href="/home"><img src="https://primeview-media.com/wp-content/uploads/2026/03/logo4.png" alt="Prime View Media"></a><nav class="links">
+<a href="/home">Home</a><a href="/about">About</a><a href="/realestate">Real Estate</a><a href="/portfolio">Portfolio</a><a href="/btl">Behind the Listing</a><a href="/blog">Blog</a><a href="https://go.primeview-media.com/realtor-ce">Realtor CE</a><a class="book" href="https://primeviewmedia.hd.pics/order">Book a Shoot</a>
+</nav><button class="mobile-toggle" aria-label="Open menu">MENU</button></div></header>
+
+<main>
+<section class="hero"><video autoplay muted loop playsinline preload="metadata"><source src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac4f38ec062e4fb0521aa77.mp4" type="video/mp4"></video><div class="wrap hero-content reveal"><div class="eyebrow">Real Estate • Commercial • Drone • 360</div><h1>Media that makes the property <span class="gold">stand out.</span></h1><p class="lead">Professional photography, video, drone, floor plans and immersive property media for real estate professionals and commercial projects across West Virginia, Northern Virginia and Maryland.</p><div class="actions"><a class="btn primary" href="https://primeviewmedia.hd.pics/order">Book a Shoot</a><a class="btn" href="/portfolio">View Portfolio</a></div></div></section>
+
+<div class="logo-band" aria-label="Selected Prime View Media clients">
+<div class="logo-viewport"><div class="logo-row"><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2e195f9172edd69798.jpeg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2f7d735ea2a189d243.png" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2f8c077584b4dff038.webp" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2ed5f4a8af43926aec.jpg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2e0fb2818e7bd6e0cb.png" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2e7d735ea2a189d22b.jpeg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2e195f9172edd69799.jpg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2ed5f4a8af43926b07.jpg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2e195f9172edd69798.jpeg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2f7d735ea2a189d243.png" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2f8c077584b4dff038.webp" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2ed5f4a8af43926aec.jpg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2e0fb2818e7bd6e0cb.png" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2e7d735ea2a189d22b.jpeg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2e195f9172edd69799.jpg" alt="Prime View Media client logo"></div><div class="logo-item"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69f2ed5f4a8af43926b07.jpg" alt="Prime View Media client logo"></div></div></div></div>
+
+<section><div class="wrap"><div class="section-head reveal"><div><div class="eyebrow">Real Estate Media</div><h2>Everything needed to <span class="gold">market the listing.</span></h2></div><p class="muted">Choose the service you need, see examples and details on the Real Estate page, then book the property directly through HDPhotoHub.</p></div>
+<div class="services">
+<a class="service reveal" href="/realestate#photography"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6aa05765fb76acb4a9343083.jpg" alt="Professional real estate kitchen photography by Prime View Media"><div class="service-copy"><div class="eyebrow">01</div><h3>Photography</h3><p>Clean, professional listing imagery.</p><span class="explore">Explore Photography →</span></div></a>
+<a class="service reveal" href="/realestate#video"><video autoplay muted loop playsinline preload="metadata" aria-label="Real estate video"><source src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6aa05e5e4d38c898d518a96e.mp4" type="video/mp4"></video><div class="service-copy"><div class="eyebrow">02</div><h3>Video</h3><p>Cinematic property coverage built for movement and attention.</p><span class="explore">Explore Video →</span></div></a>
+<a class="service reveal" href="/realestate#drone"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6aa055dffb76acb4a933ff9c.jpg" alt="Drone media"><div class="service-copy"><div class="eyebrow">03</div><h3>Drone</h3><p>Aerial perspective for homes, land and commercial properties.</p><span class="explore">Explore Drone →</span></div></a>
+<a class="service reveal" href="/realestate#floorplans"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac67dabd5f4a8af438e60c9.jpg" alt="Floor plans"><div class="service-copy"><div class="eyebrow">04</div><h3>Floor Plans</h3><p>Clear property layouts that help buyers understand the space.</p><span class="explore">Explore Floor Plans →</span></div></a>
+<a class="service reveal" href="/realestate#360"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac67ea0d5f4a8af438e820b.jpg" alt="360 tours"><div class="service-copy"><div class="eyebrow">05</div><h3>360 Tours</h3><p>Immersive property viewing for remote and online buyers.</p><span class="explore">Explore 360 Tours →</span></div></a>
+<a class="service reveal" href="https://primeviewmedia.hd.pics/39762-Rivers-Edge-Ln" target="_blank" rel="noopener"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac69b1122bc27f58fc20467.jpg" alt="Listing website example for 39762 Rivers Edge Lane"><div class="service-copy"><div class="eyebrow">06</div><h3>Listing Websites</h3><p>A dedicated property experience built to showcase the listing.</p><span class="explore">View Live Example →</span></div></a>
+</div></div></section>
+
+<section class="booking-explainer" id="booking-help">
+  <div class="wrap reveal">
+    <div class="booking-explainer-grid">
+      <div class="booking-video">
+        <video controls playsinline preload="metadata">
+          <source src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac6a8d522bc27f58fc3a3d4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div>
+        <div class="eyebrow">First Time Booking?</div>
+        <h2>Booking your shoot is <span class="gold">simple.</span></h2>
+        <p class="muted">Watch this quick welcome before you book. New clients will create an account in our booking system, then choose services, enter the property details and select an available appointment.</p>
+        <div class="booking-steps">
+          <span>Create Account</span><span>Choose Services</span><span>Select Date</span><span>Submit Order</span>
+        </div>
+        <a class="btn gold-btn" href="https://primeviewmedia.hd.pics/order" target="_blank" rel="noopener">Book a Shoot</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="work"><div class="wrap"><div class="section-head reveal"><div><div class="eyebrow">Selected Work</div><h2>Let the work <span class="gold">do the talking.</span></h2></div><div><p class="muted">A small look at recent property media. The full portfolio stays one click away.</p><a class="btn" href="/portfolio">View Portfolio</a></div></div><div class="work-grid reveal"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6aa05759d63e08439ccc379a.jpg" alt="Prime View Media featured real estate photography"><div class="work-side"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6aa055f1360a619b9fcf55b8.jpg" alt="Prime View Media featured real estate photography"><img src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6aa05568dd867dc12ddcebc3.jpg" alt="Prime View Media featured real estate photography"></div></div></div></section>
+
+<section><div class="wrap about"><img class="reveal" src="https://assets.cdn.filesafe.space/gavTC8aLScC5GLrOFxgO/media/6ac4f69bc478ac553502be61.jpeg" alt="Juwan Davis, Prime View Media"><div class="reveal"><div class="eyebrow">Meet Juwan Davis</div><h2>Behind the <span class="gold">camera.</span></h2><p>Prime View Media combines professional property media with a practical, streamlined experience for real estate professionals and businesses. Standard listing media is easy to book online; custom and commercial projects can be planned directly.</p><div class="actions"><a class="btn" href="/about">About Prime View Media</a></div></div></div></section>
+
+<section class="custom"><div class="wrap"><div class="section-head reveal"><div><div class="eyebrow">Commercial + Custom</div><h2>Not a standard <span class="gold">property shoot?</span></h2></div><p class="muted">For custom video, recurring commercial media, larger projects or something outside the normal real estate workflow, contact Prime View Media directly.</p></div><div class="custom-grid">
+<div class="card reveal"><div class="eyebrow">Standard Real Estate</div><h3>Ready to book?</h3><p>Choose your property services and appointment directly through HDPhotoHub.</p><a class="btn primary" href="https://primeviewmedia.hd.pics/order">Book a Shoot</a></div>
+<div class="card reveal"><div class="eyebrow">Custom Project</div><h3>Let's talk about it.</h3><p>Schedule a general consultation or call the Prime View Media office at <strong>703-539-2305</strong>.</p><a class="btn" href="https://api.primeview-media.com/widget/booking/UqnPX3fnagiiBkIQ4gaY">General Consultation</a></div>
+</div></div></section>
+
+<section><div class="wrap"><div class="section-head reveal"><div><div class="eyebrow">For Realtors</div><h2>More than the <span class="gold">shoot.</span></h2></div><p class="muted">Explore practical content behind the work and professional education built for real estate professionals.</p></div><div class="resource-grid"><div class="card reveal"><div class="eyebrow">Behind the Listing</div><h3>Go behind the work.</h3><p>Property media, field experiences and practical content from behind the listing.</p><a class="btn" href="/btl">Explore Behind the Listing</a></div><div class="card reveal"><div class="eyebrow">Realtor CE</div><h3>Professional education.</h3><p>Explore Prime View Media's Realtor continuing education resources and upcoming opportunities.</p><a class="btn" href="https://go.primeview-media.com/realtor-ce">Explore Realtor CE</a></div></div></div></section>
+
+<section class="reviews-section"><div class="wrap reveal">
+<div class="section-head"><div><div class="eyebrow">Client Reviews</div><h2>What clients <span class="gold">say.</span></h2></div>
+<p class="muted">Recent Google reviews for Prime View Media.</p></div>
+<div class="review-frame">
+<script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
+<iframe class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/gavTC8aLScC5GLrOFxgO' frameborder='0' scrolling='no' style='min-width:100%;width:100%;'></iframe>
+</div></div></section>
+
+
+<section class="brand-ecosystem">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <div><div class="eyebrow">More From Juwan Davis</div><h2>Branding. Media. <span class="gold">Systems.</span></h2></div>
+    </div>
+    <div class="brand-links">
+      <a class="brand-link" href="https://juwandavisphotography.com/" target="_blank" rel="noopener">
+        <div class="eyebrow">Branding + Events</div>
+        <h3>Juwan Davis Photography</h3>
+        <p>Professional branding photography and event coverage built around people, businesses and their stories.</p>
+        <span class="explore">Explore Branding →</span>
+      </a>
+      <a class="brand-link" href="https://goprimeintelligence.com/" target="_blank" rel="noopener">
+        <div class="eyebrow">Systems + Automation</div>
+        <h3>Prime Intelligence</h3>
+        <p>CRM, automation and AI systems designed to help businesses capture leads, follow up and operate smarter.</p>
+        <span class="explore">Explore Systems →</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="final"><div class="wrap reveal"><div class="eyebrow">Prime View Media</div><h2>Ready for the next <span class="gold">listing?</span></h2><p class="muted">Book your property shoot directly through HDPhotoHub.</p><div class="actions"><a class="btn primary" href="https://primeviewmedia.hd.pics/order">Book a Shoot</a></div></div></section>
+</main>
+
+<footer><div class="wrap footer-grid"><div><img src="https://primeview-media.com/wp-content/uploads/2026/03/logo4.png" alt="Prime View Media"><p class="muted">Real estate and commercial media serving the region.</p></div><div><h4>Prime View Media</h4><a href="/about">About</a><a href="/realestate">Real Estate</a><a href="/portfolio">Portfolio</a><a href="/btl">Behind the Listing</a><a href="/blog">Blog</a></div><div><h4>Work With Us</h4><a href="https://primeviewmedia.hd.pics/order">Book a Shoot</a><a href="/contact">Contact</a><a href="https://go.primeview-media.com/realtor-ce">Realtor CE</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div><div><h4>Our Brands</h4><a href="https://juwandavisphotography.com/">Juwan Davis Photography</a><a href="https://goprimeintelligence.com/">Prime Intelligence</a></div></div></footer>
+<div class="powered-credit">Powered by <a href="https://goprimeintelligence.com/" target="_blank" rel="noopener">Prime Intelligence</a></div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const toggle=document.querySelector('.mobile-toggle'), links=document.querySelector('.links');
+toggle.addEventListener('click',()=>{const open=links.style.display==='flex';links.style.display=open?'none':'flex';if(!open){links.style.position='absolute';links.style.top='88px';links.style.left='0';links.style.right='0';links.style.background='#050505';links.style.padding='24px';links.style.flexDirection='column';links.style.alignItems='stretch'}});
+</script>
+<a class="sticky-book" href="https://primeviewmedia.hd.pics/order" target="_blank" rel="noopener" aria-label="Book a Prime View Media real estate shoot">Book a Shoot</a>
+</div></body></html>
