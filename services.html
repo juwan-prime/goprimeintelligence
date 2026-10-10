@@ -88,13 +88,25 @@ nav.pi-scrolled{background:rgba(0,0,0,.95);box-shadow:0 12px 34px rgba(0,0,0,.32
 .pi-global-nav .mobile-toggle{display:none;background:none;border:1px solid rgba(201,168,118,.18);color:#C9A876;padding:8px 10px}
 @media(max-width:900px){.pi-global-nav{padding:0 18px!important}.pi-global-nav .mobile-toggle{display:block}.pi-global-nav .nav-links{display:none;position:absolute;top:69px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#050505;border-bottom:1px solid rgba(201,168,118,.18)}.pi-global-nav .nav-links.open{display:flex}.pi-global-nav .nav-links li a{display:block;padding:15px 20px}}
 </style>
+<style id="pi-nav-layout-audit">
+.pi-global-nav,.pi-global-nav *,nav .nav-inner,nav .nav-links{box-sizing:border-box}
+.pi-global-nav .nav-inner,nav .nav-inner{min-width:0}
+.pi-global-nav .nav-links,nav .nav-links{max-width:100%}
+@media(max-width:900px){
+  .pi-global-nav .nav-links.open,nav .nav-links.open{display:flex!important;max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain}
+  .pi-global-nav .nav-links:not(.open),nav .nav-links:not(.open){display:none!important}
+  .pi-global-nav .mobile-toggle,nav .mobile-toggle{cursor:pointer;min-height:44px;min-width:58px}
+  .pi-global-nav .nav-inner,nav .nav-inner{gap:12px}
+  .pi-global-nav .brand,nav .brand{min-width:0;font-size:clamp(1.1rem,5vw,1.5rem)}
+}
+</style>
 </head><body>
 
 <nav class="pi-global-nav">
 <div class="nav-inner">
 <a class="brand" href="https://goprimeintelligence.com/">Prime <span>Intelligence</span></a>
-<button class="mobile-toggle" aria-label="Toggle navigation" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')">Menu</button>
-<ul class="nav-links">
+<button class="mobile-toggle" aria-label="Toggle navigation" type="button" aria-expanded="false" aria-controls="pi-services-nav-links">Menu</button>
+<ul class="nav-links" id="pi-services-nav-links">
 <li><a href="https://goprimeintelligence.com/">Home</a></li>
 <li><a href="https://goprimeintelligence.com/services">Services</a></li>
 <li><a href="https://goprimeintelligence.com/websites">Websites</a></li>
@@ -274,35 +286,27 @@ nav.pi-scrolled{background:rgba(0,0,0,.95);box-shadow:0 12px 34px rgba(0,0,0,.32
 <li><a href="https://goprimeintelligence.com/vip">Funding</a></li><li><a href="https://api.primeview-media.com/widget/survey/vYqQxRaoPtBktnI50FiI">Growth Checkup</a></li><li><a href="https://goprimeintelligence.com/privacy-policy">Privacy Policy</a></li><li><a href="https://goprimeintelligence.com/terms-of-service/">Terms of Service</a></li></ul>
 <div class="footer-copy">© 2026 PrimeView Media. All rights reserved.</div></footer>
 
-<script>
-const t = document.querySelector('.mobile-toggle');
-const m = document.querySelector('.nav-links');
-
-if (t && m) {
-  t.setAttribute('aria-expanded', 'false');
-
-  t.addEventListener('click', () => {
-    const isOpen = m.classList.toggle('open');
-    t.setAttribute('aria-expanded', String(isOpen));
-    t.textContent = isOpen ? 'Close' : 'Menu';
+<script id="pi-accessible-nav-fix">
+(function(){
+  const nav=document.querySelector('nav');
+  if(!nav)return;
+  const toggle=nav.querySelector('.mobile-toggle');
+  const menu=nav.querySelector('.nav-links');
+  if(!toggle||!menu)return;
+  const setOpen=(open)=>{
+    menu.classList.toggle('open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.textContent=open?'Close':'Menu';
+  };
+  setOpen(false);
+  toggle.addEventListener('click',()=>setOpen(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setOpen(false)));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')setOpen(false)});
+  document.addEventListener('click',event=>{
+    if(window.innerWidth<=900 && !nav.contains(event.target))setOpen(false);
   });
-
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      m.classList.remove('open');
-      t.setAttribute('aria-expanded', 'false');
-      t.textContent = 'Menu';
-    });
-  });
-
-  document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 900 && !m.contains(e.target) && !t.contains(e.target)) {
-      m.classList.remove('open');
-      t.setAttribute('aria-expanded', 'false');
-      t.textContent = 'Menu';
-    }
-  });
-}
+  window.addEventListener('resize',()=>{if(window.innerWidth>900)setOpen(false)});
+})();
 </script>
 
 
