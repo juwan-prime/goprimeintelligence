@@ -359,8 +359,115 @@ nav.nav-scrolled{background:rgba(0,0,0,.96);box-shadow:0 12px 36px rgba(0,0,0,.2
 }
 </style>
 
+
+<style id="juwan-connect-home-section-css">
+.juwan-connect-home{
+  padding:88px 24px;
+  background:linear-gradient(135deg,#070707 0%,#12100d 52%,#070707 100%);
+  border-top:1px solid var(--l);
+  border-bottom:1px solid var(--l);
+  position:relative;
+  overflow:hidden;
+}
+.juwan-connect-home:before{
+  content:"";
+  position:absolute;
+  width:420px;height:420px;border-radius:50%;
+  right:-150px;top:-190px;
+  background:radial-gradient(circle,rgba(201,168,118,.12),transparent 68%);
+  pointer-events:none;
+}
+.juwan-connect-inner{
+  width:100%;max-width:1120px;margin:0 auto;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center;
+  position:relative;z-index:1;
+}
+.juwan-connect-copy p{
+  color:var(--m);font-size:.92rem;font-weight:300;margin-bottom:14px;
+}
+.juwan-connect-panel{
+  padding:34px;background:#090909;border:1px solid var(--l);
+  box-shadow:0 25px 70px rgba(0,0,0,.28);
+}
+.juwan-connect-panel h3{font-size:2rem;margin-bottom:12px}
+.juwan-connect-panel p{color:var(--m);font-size:.88rem;margin-bottom:20px}
+.juwan-connect-list{list-style:none;margin:0 0 24px;padding:0}
+.juwan-connect-list li{
+  padding:11px 0;border-bottom:1px solid rgba(201,168,118,.12);
+  color:rgba(255,255,255,.76);font-size:.8rem;
+}
+.juwan-connect-list li:before{content:"→";color:var(--g);margin-right:10px}
+@media(max-width:900px){.juwan-connect-inner{grid-template-columns:1fr}}
+@media(max-width:600px){.juwan-connect-home{padding:68px 16px}}
+</style>
+
+
+<style id="pi-halloween-overlay-css">
+/* HALLOWEEN EXPERIENCE LAYER — visual only */
+#pi-halloween-layer{position:fixed;inset:0;pointer-events:none;z-index:9998;overflow:hidden}
+.pi-web{position:absolute;right:-8px;top:70px;width:150px;height:150px;opacity:.22}
+.pi-web:before,.pi-web:after{content:"";position:absolute;inset:0;background:
+repeating-conic-gradient(from 0deg,rgba(255,255,255,.55) 0 1deg,transparent 1deg 30deg);
+border-radius:50%}
+.pi-web:after{background:repeating-radial-gradient(circle at center,transparent 0 14px,rgba(255,255,255,.35) 15px 16px);}
+
+.pi-fog{position:absolute;left:-20%;bottom:-35px;width:140%;height:150px;opacity:.18;
+background:radial-gradient(ellipse at 20% 70%,#fff 0 7%,transparent 28%),
+radial-gradient(ellipse at 48% 75%,#fff 0 8%,transparent 30%),
+radial-gradient(ellipse at 75% 70%,#fff 0 7%,transparent 28%);
+filter:blur(22px);animation:piFog 18s ease-in-out infinite alternate}
+
+.pi-bat{position:absolute;font-size:28px;opacity:.32;filter:grayscale(1);animation:piBat linear infinite}
+.pi-b1{top:17%;left:-60px;animation-duration:17s}
+.pi-b2{top:31%;left:-90px;animation-duration:23s;animation-delay:5s;font-size:20px}
+.pi-b3{top:11%;left:-70px;animation-duration:28s;animation-delay:11s;font-size:16px}
+
+.pi-spider-line{position:absolute;right:48px;top:0;width:1px;height:145px;background:rgba(255,255,255,.22)}
+.pi-spider{position:absolute;right:35px;top:136px;font-size:24px;opacity:.42;animation:piSpider 7s ease-in-out infinite}
+
+.pi-leaf{position:absolute;top:-40px;font-size:18px;opacity:.28;animation:piLeaf linear infinite}
+.pi-l1{left:12%;animation-duration:14s}
+.pi-l2{left:38%;animation-duration:18s;animation-delay:4s}
+.pi-l3{left:68%;animation-duration:16s;animation-delay:8s}
+.pi-l4{left:88%;animation-duration:21s;animation-delay:2s}
+
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9997;
+box-shadow:inset 0 0 110px rgba(255,96,0,.035),inset 0 0 180px rgba(88,32,130,.025)}
+
+@keyframes piFog{from{transform:translateX(-3%) scale(1)}to{transform:translateX(4%) scale(1.08)}}
+@keyframes piBat{
+0%{transform:translate(-5vw,0) rotate(-7deg)}
+35%{transform:translate(38vw,-28px) rotate(5deg)}
+70%{transform:translate(78vw,18px) rotate(-4deg)}
+100%{transform:translate(112vw,-18px) rotate(6deg)}
+}
+@keyframes piSpider{0%,100%{transform:translateY(0)}50%{transform:translateY(48px)}}
+@keyframes piLeaf{
+0%{transform:translateY(-5vh) translateX(0) rotate(0deg)}
+45%{transform:translateY(48vh) translateX(45px) rotate(190deg)}
+100%{transform:translateY(108vh) translateX(-30px) rotate(420deg)}
+}
+@media(max-width:600px){.pi-web{width:105px;height:105px}.pi-spider-line{right:25px}.pi-spider{right:12px}.pi-fog{height:110px}}
+@media(prefers-reduced-motion:reduce){.pi-fog,.pi-bat,.pi-spider,.pi-leaf{animation:none!important}.pi-bat,.pi-leaf{display:none}}
+</style>
+
 </head>
 <body>
+
+<div id="pi-halloween-layer" aria-hidden="true">
+  <div class="pi-web"></div>
+  <div class="pi-spider-line"></div>
+  <div class="pi-spider">🕷️</div>
+  <div class="pi-bat pi-b1">🦇</div>
+  <div class="pi-bat pi-b2">🦇</div>
+  <div class="pi-bat pi-b3">🦇</div>
+  <div class="pi-leaf pi-l1">🍂</div>
+  <div class="pi-leaf pi-l2">🍁</div>
+  <div class="pi-leaf pi-l3">🍂</div>
+  <div class="pi-leaf pi-l4">🍁</div>
+  <div class="pi-fog"></div>
+</div>
+
 <nav>
 <div class="nav-inner">
 <a class="brand" href="https://goprimeintelligence.com/">Prime <span>Intelligence</span></a>
@@ -582,6 +689,34 @@ nav.nav-scrolled{background:rgba(0,0,0,.96);box-shadow:0 12px 36px rgba(0,0,0,.2
 </div>
 </div>
 </section>
+
+<section class="juwan-connect-home" id="juwan-connect">
+  <div class="juwan-connect-inner">
+    <div class="juwan-connect-copy">
+      <div class="eyebrow">Beyond Prime Intelligence</div>
+      <h2 class="section-title">Stay connected to the <span>entire network.</span></h2>
+      <p>Prime Intelligence is one part of what Juwan Davis is building. Juwan Davis Connect brings together business, media, education, events, collaborations, trusted partners, and opportunities across the broader network.</p>
+      <p>If you want to stay connected beyond CRM, automation, websites, and AI, this is the place to start.</p>
+      <div class="btn-row" style="margin-top:26px;">
+        <a class="btn btn-gold" href="https://juwandavisphotography.com/connect">Visit Juwan Davis Connect</a>
+      </div>
+    </div>
+    <div class="juwan-connect-panel">
+      <div class="eyebrow">Juwan Davis Connect</div>
+      <h3>One connection. Multiple lanes.</h3>
+      <p>Connect with Juwan and explore the people, businesses, resources, and projects connected across his professional network.</p>
+      <ul class="juwan-connect-list">
+        <li>Business &amp; Professional Connections</li>
+        <li>Media &amp; Creative Services</li>
+        <li>Education &amp; Training</li>
+        <li>Events &amp; Collaborations</li>
+        <li>Proud Partners &amp; Trusted Resources</li>
+      </ul>
+      <a class="btn btn-outline" href="https://juwandavisphotography.com/connect">Explore the Network →</a>
+    </div>
+  </div>
+</section>
+
 <section class="final-cta">
 <div class="eyebrow">Ready to Clean Up the System?</div>
 <h2>Build the foundation <span>before the next wave of leads.</span></h2>
