@@ -402,73 +402,33 @@ nav.nav-scrolled{background:rgba(0,0,0,.96);box-shadow:0 12px 36px rgba(0,0,0,.2
 </style>
 
 
-<style id="pi-halloween-overlay-css">
-/* HALLOWEEN EXPERIENCE LAYER — visual only */
-#pi-halloween-layer{position:fixed;inset:0;pointer-events:none;z-index:9998;overflow:hidden}
-.pi-web{position:absolute;right:-8px;top:70px;width:150px;height:150px;opacity:.22}
-.pi-web:before,.pi-web:after{content:"";position:absolute;inset:0;background:
-repeating-conic-gradient(from 0deg,rgba(255,255,255,.55) 0 1deg,transparent 1deg 30deg);
-border-radius:50%}
-.pi-web:after{background:repeating-radial-gradient(circle at center,transparent 0 14px,rgba(255,255,255,.35) 15px 16px);}
-
-.pi-fog{position:absolute;left:-20%;bottom:-35px;width:140%;height:150px;opacity:.18;
-background:radial-gradient(ellipse at 20% 70%,#fff 0 7%,transparent 28%),
-radial-gradient(ellipse at 48% 75%,#fff 0 8%,transparent 30%),
-radial-gradient(ellipse at 75% 70%,#fff 0 7%,transparent 28%);
-filter:blur(22px);animation:piFog 18s ease-in-out infinite alternate}
-
-.pi-bat{position:absolute;font-size:28px;opacity:.32;filter:grayscale(1);animation:piBat linear infinite}
-.pi-b1{top:17%;left:-60px;animation-duration:17s}
-.pi-b2{top:31%;left:-90px;animation-duration:23s;animation-delay:5s;font-size:20px}
-.pi-b3{top:11%;left:-70px;animation-duration:28s;animation-delay:11s;font-size:16px}
-
-.pi-spider-line{position:absolute;right:48px;top:0;width:1px;height:145px;background:rgba(255,255,255,.22)}
-.pi-spider{position:absolute;right:35px;top:136px;font-size:24px;opacity:.42;animation:piSpider 7s ease-in-out infinite}
-
-.pi-leaf{position:absolute;top:-40px;font-size:18px;opacity:.28;animation:piLeaf linear infinite}
-.pi-l1{left:12%;animation-duration:14s}
-.pi-l2{left:38%;animation-duration:18s;animation-delay:4s}
-.pi-l3{left:68%;animation-duration:16s;animation-delay:8s}
-.pi-l4{left:88%;animation-duration:21s;animation-delay:2s}
-
-body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9997;
-box-shadow:inset 0 0 110px rgba(255,96,0,.035),inset 0 0 180px rgba(88,32,130,.025)}
-
-@keyframes piFog{from{transform:translateX(-3%) scale(1)}to{transform:translateX(4%) scale(1.08)}}
-@keyframes piBat{
-0%{transform:translate(-5vw,0) rotate(-7deg)}
-35%{transform:translate(38vw,-28px) rotate(5deg)}
-70%{transform:translate(78vw,18px) rotate(-4deg)}
-100%{transform:translate(112vw,-18px) rotate(6deg)}
-}
-@keyframes piSpider{0%,100%{transform:translateY(0)}50%{transform:translateY(48px)}}
-@keyframes piLeaf{
-0%{transform:translateY(-5vh) translateX(0) rotate(0deg)}
-45%{transform:translateY(48vh) translateX(45px) rotate(190deg)}
-100%{transform:translateY(108vh) translateX(-30px) rotate(420deg)}
-}
-@media(max-width:600px){.pi-web{width:105px;height:105px}.pi-spider-line{right:25px}.pi-spider{right:12px}.pi-fog{height:110px}}
-@media(prefers-reduced-motion:reduce){.pi-fog,.pi-bat,.pi-spider,.pi-leaf{animation:none!important}.pi-bat,.pi-leaf{display:none}}
+<style id="pi-thanksgiving-overlay-css">
+/* Thanksgiving season overlay — lightweight and pointer-safe */
+#pi-thanksgiving-layer{position:fixed;inset:0;z-index:9998;pointer-events:none;overflow:hidden;contain:layout style;}
+#pi-thanksgiving-layer .pi-fall{position:absolute;top:-65px;line-height:1;opacity:.48;user-select:none;animation:piAutumnFall var(--dur,19s) linear infinite;animation-delay:var(--delay,0s);will-change:transform;filter:drop-shadow(0 2px 3px rgba(0,0,0,.2));}
+#pi-thanksgiving-layer .pi-fall:nth-child(1){left:8%;font-size:25px;--dur:18s;--delay:-4s;--drift:65px}
+#pi-thanksgiving-layer .pi-fall:nth-child(2){left:25%;font-size:19px;--dur:22s;--delay:-13s;--drift:-40px}
+#pi-thanksgiving-layer .pi-fall:nth-child(3){left:47%;font-size:23px;--dur:20s;--delay:-8s;--drift:50px}
+#pi-thanksgiving-layer .pi-fall:nth-child(4){left:72%;font-size:22px;--dur:25s;--delay:-18s;--drift:-65px}
+#pi-thanksgiving-layer .pi-fall:nth-child(5){left:91%;font-size:18px;--dur:21s;--delay:-3s;--drift:-50px}
+#pi-thanksgiving-layer .pi-turkey{position:absolute;right:2%;bottom:4%;font-size:35px;line-height:1;opacity:.56;animation:piTurkeyFloat 5.5s ease-in-out infinite;user-select:none;}
+@keyframes piAutumnFall{0%{transform:translate3d(0,-8vh,0) rotate(0deg)}50%{transform:translate3d(var(--drift),51vh,0) rotate(165deg)}100%{transform:translate3d(0,112vh,0) rotate(350deg)}}
+@keyframes piTurkeyFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-11px) rotate(4deg)}}
+@media(max-width:600px){#pi-thanksgiving-layer .pi-fall{font-size:18px;opacity:.33}#pi-thanksgiving-layer .pi-turkey{font-size:27px;opacity:.35}}
+@media(prefers-reduced-motion:reduce){#pi-thanksgiving-layer .pi-fall{display:none}#pi-thanksgiving-layer .pi-turkey{animation:none}}
 </style>
 
 </head>
 <body>
 
-<div id="pi-halloween-layer" aria-hidden="true">
-  <div class="pi-web"></div>
-  <div class="pi-spider-line"></div>
-  <div class="pi-spider">🕷️</div>
-  <div class="pi-bat pi-b1">🦇</div>
-  <div class="pi-bat pi-b2">🦇</div>
-  <div class="pi-bat pi-b3">🦇</div>
-  <div class="pi-leaf pi-l1">🍂</div>
-  <div class="pi-leaf pi-l2">🍁</div>
-  <div class="pi-leaf pi-l3">🍂</div>
-  <div class="pi-leaf pi-l4">🍁</div>
-  <div class="pi-fog"></div>
-</div>
-
-<nav>
+<div id="pi-thanksgiving-layer" aria-hidden="true">
+  <span class="pi-fall">🍁</span>
+  <span class="pi-fall">🍂</span>
+  <span class="pi-fall">🍁</span>
+  <span class="pi-fall">🍂</span>
+  <span class="pi-fall">🍁</span>
+  <span class="pi-turkey">🦃</span>
+</div><nav>
 <div class="nav-inner">
 <a class="brand" href="https://goprimeintelligence.com/">Prime <span>Intelligence</span></a>
 <button class="mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">Menu</button>
